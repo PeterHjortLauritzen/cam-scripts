@@ -16,10 +16,10 @@ set -euo pipefail
 
 # ---------- Defaults ----------
 MACHINE="${MACHINE:-derecho}"           # derecho | izumi
-SRC_BRANCH="${SRC_BRANCH:-cam-opt-new}" # only used when --src omitted
+SRC_BRANCH="${SRC_BRANCH:-cam_development}" # only used when --src omitted
 COMPSET="${COMPSET:-FKESSLER}"
 STOP_OPTION="${STOP_OPTION:-ndays}"
-STOP_N="${STOP_N:-1}"
+STOP_N="${STOP_N:-10}"
 NTHRDS="${NTHRDS:-1}"
 QUEUE="${QUEUE:-main}"
 COMPILER_DERECHO="${COMPILER_DERECHO:-intel}"
@@ -183,10 +183,11 @@ cd "${CASE_PATH}"
 # ---------- user_nl_cam tweaks for SE grids ----------
 if [[ "${RES}" == "ne30pg3_ne30pg3_mg17" || "${RES}" == "ne30_ne30_mg17" ]]; then
   {
-    echo "se_statefreq       = 144"
-    echo "interpolate_output = .true.,.true.,.true."
-    echo "interpolate_nlat   = 192,192,192"
-    echo "interpolate_nlon   = 288,288,288"
+    echo "se_statefreq         = 144"
+    echo "se_statediag_numtrac = 200"
+    echo "interpolate_output   = .true.,.true.,.true."
+    echo "interpolate_nlat     = 192,192,192"
+    echo "interpolate_nlon     = 288,288,288"
   } >> user_nl_cam
 fi
 
@@ -194,6 +195,7 @@ fi
   echo "avgflag_pertape(1) = 'I'"
   echo "avgflag_pertape(2) = 'I'"
   echo "avgflag_pertape(3) = 'I'"
+  echo "nhtfrq=-24,-24,-24"
 } >> user_nl_cam
 
 # ---------- Setup complete ----------
