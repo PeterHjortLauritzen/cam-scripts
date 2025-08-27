@@ -7,6 +7,7 @@
 #
 #  ./fmt-ne30pg3.sh --use-fork /glade/u/home/pel/src/cam_development --short --skip-build test001
 #
+
 set -euo pipefail
 
 # ---- Defaults ----
@@ -20,15 +21,15 @@ CASE_NAME=""
 SKIP_BUILD="false"
 
 # Derecho/NCAR environment defaults
-PROJECT="UESM0001"                      # default project code
+PROJECT="P03010039"                     # default project code
 CESM_ROOT="/glade/work/$USER/cesm"      # fallback CESM root
 MACHINE="derecho"
 QUEUE="main"
 WALLTIME="00:30:00"
 
-COMPSET="FWHIST"
+COMPSET="FHISTC_MTso"
 RES="ne30pg3_ne30pg3_mg17"
-
+#RES="f09_f09_mg17"
 # ---- Helpers ----
 usage() {
   cat <<EOF
@@ -143,21 +144,28 @@ cd "${CASEDIR}"
 ./xmlchange "STOP_OPTION=${STOP_OPTION}"
 ./xmlchange "STOP_N=${STOP_N}"
 ./xmlchange "TIMER_LEVEL=10"
+# Disable short-run archiving
+if [[ "${RUN_PROFILE}" == "short" ]]; then
+  ./xmlchange "DOUT_S=FALSE"
+fi
 
 # Write user_nl_cam BEFORE setup (bnd_topo always; rest depends on RUN_PROFILE)
 if [[ "${RUN_PROFILE}" == "short" ]]; then
   cat > "user_nl_cam" <<'NL'
 bnd_topo = "/glade/campaign/cgd/amp/pel/topo/cesm3/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_noleak_greendlndantarcsgh30fac2.50_20250708.nc"
-
+ncdata         = '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/inic/se/c153_ne30pg3_FMTHIST_x02.cam.i.1990-01-01-00000_c240618.nc'
 interpolate_output  =  .true.,  .true., .true., .false., .false., .true.,  .true.
 interpolate_nlat    =     192,     192,    192,     192,     192,     192,   192
 interpolate_nlon    =     288,     288,    288,     288,     288,     288,   288
+interpolate_type = 1,0,1,1,1,1,1
 
 empty_htapes = .true.
-fincl2 = 'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA', 'PSL','OMEGA500','OMEGA850'
-nhtfrq              =       0,     -3
+fincl2 = 'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA', 'PSL','OMEGA500','OMEGA850','U','V'
+fincl3 = 'U','V'
+nhtfrq              =       0,     -3, -3
 ndens               =       2,       2
 avgflag_pertape(2) = 'I'
+avgflag_pertape(3) = 'I'
 NL
 else
   cat > "user_nl_cam" <<'NL'
