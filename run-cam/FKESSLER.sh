@@ -125,7 +125,7 @@ Hint 1: If you omitted --src, ensure $HOME/src/${SRC_BRANCH} contains a CESM/CAM
 Hint 2: If you provided --src, point it to the *source root* that contains cime/ (e.g., /glade/work/<user>/cesm2)."
 
 # ---------- Case naming (no username duplication) ----------
-CASE_NAME="${COMPSET}_${RES}"
+CASE_NAME="${COMPSET}_${RES}_baseline"
 
 # Prefer CIME_OUTPUT_ROOT; otherwise fall back carefully using SCRATCH/SCR_ROOT
 if [[ -n "${CIME_OUTPUT_ROOT:-}" ]]; then
@@ -178,7 +178,6 @@ cd "${CASE_PATH}"
 
 # Optional CAM config (uncomment and edit as needed)
 # ./xmlchange --append "CAM_CONFIG_OPTS=-phys kessler -chem terminator -analytic_ic -nlev 32"
- ./xmlchange --append "CAM_CONFIG_OPTS=-nadv_tt=15"
 
 # ---------- user_nl_cam tweaks for SE grids ----------
 if [[ "${RES}" == "ne30pg3_ne30pg3_mg17" || "${RES}" == "ne30_ne30_mg17" ]]; then

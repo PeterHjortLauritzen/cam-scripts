@@ -6,7 +6,15 @@
 # Frequently used:
 #
 #  ./fmt-ne30pg3.sh --use-fork /glade/u/home/pel/src/cam_development --short --skip-build test001
+#    
+# Chemistry compset:
+#./fmt-ne30pg3.sh --chemistry --short mychem_case
 #
+#Performance analysis, no diag I/O:
+#./fmt-ne30pg3.sh --performance_analysis --long myperf_case
+#
+#Performance analysis with chemistry (Cecile pecount): 2160:
+#./fmt-ne30pg3.sh --use-fork ~/src/cam_development --short --chemistry --performance_analysis test001
 
 set -euo pipefail
 
@@ -20,6 +28,12 @@ CAM_FORK_PATH=""
 CASE_NAME=""
 SKIP_BUILD="false"
 
+CHEMISTRY="false"
+PERF_ANALYSIS="false"
+
+STOP_N_OVERRIDE=""
+STOP_OPTION_OVERRIDE=""
+
 # Derecho/NCAR environment defaults
 PROJECT="P03010039"                     # default project code
 CESM_ROOT="/glade/work/$USER/cesm"      # fallback CESM root
@@ -29,17 +43,27 @@ WALLTIME="00:30:00"
 
 COMPSET="FHISTC_MTso"
 RES="ne30pg3_ne30pg3_mg17"
+PECOUNT="2160"
+CHEMISTRY="${CHEMISTRY:-false}"
+STOP_N_OVERRIDE=""; STOP_OPTION_OVERRIDE=""
+
 #RES="f09_f09_mg17"
 # ---- Helpers ----
 usage() {
   cat <<EOF
-Usage: $(basename "$0") [--use-fork PATH] [--short|--long] [--skip-build] CASE_NAME
+Usage: $(basename "$0") [--use-fork PATH] [--short|--long] [--skip-build] [--chemistry] [--performance_analysis] [--stop-n N] [--stop-option OPTION] CASE_NAME
 
 Options:
   --use-fork PATH   Path to your CESM/CAM fork (uses its cime/scripts if present).
   --short           One-day smoke test (STOP_N=${STOP_N_SHORT_DEFAULT}).
   --long            Longer run (STOP_N=${STOP_N_LONG_DEFAULT}).
   --skip-build      Create and setup the case, but DO NOT build or submit.
+  --chemistry       Switch COMPSET to FHISTC_MTt4s.
+  --performance_analysis  Remove all lines starting with "fincl" from user_nl_cam to avoid I/O.
+  --stop-n N        Override STOP_N (integer).
+  --stop-option OPT Override STOP_OPTION (e.g., ndays, nmonths, nyears).
+  --stop-n N        Override STOP_N (default depends on run profile).
+  --stop-option OPT Override STOP_OPTION (default depends on run profile).
   -h, --help        Show this help.
 
 Defaults:
@@ -47,7 +71,7 @@ Defaults:
   CESM_ROOT=${CESM_ROOT}
   MACHINE=${MACHINE}, QUEUE=${QUEUE}, WALLTIME=${WALLTIME}
   COMPSET=${COMPSET}, RES=${RES}
-
+  PECOUNT=${PECOUNT}
 Example:
   $(basename "$0") --use-fork /glade/u/home/\$USER/src/cam_development --short --skip-build test001
 EOF
@@ -64,6 +88,20 @@ while [[ $# -gt 0 ]]; do
     --short) RUN_PROFILE="short"; shift;;
     --long)  RUN_PROFILE="long";  shift;;
     --skip-build) SKIP_BUILD="true"; shift;;
+    --chemistry) CHEMISTRY="true"; shift;;
+    --performance_analysis) PERF_ANALYSIS="true"; shift;;
+    --stop-n)
+      [[ $# -ge 2 ]] || die "--stop-n requires an integer value"
+      STOP_N_OVERRIDE="$2"; shift 2;;
+    --stop-option)
+      [[ $# -ge 2 ]] || die "--stop-option requires a value (ndays, nmonths, nyears, etc.)"
+      STOP_OPTION_OVERRIDE="$2"; shift 2;;
+    --stop-n)
+      [[ $# -ge 2 ]] || die "--stop-n requires a value"
+      STOP_N_OVERRIDE="$2"; shift 2;;
+    --stop-option)
+      [[ $# -ge 2 ]] || die "--stop-option requires a value"
+      STOP_OPTION_OVERRIDE="$2"; shift 2;;
     -h|--help) usage; exit 0;;
     --) shift; break;;
     -*) die "Unknown option: $1";;
@@ -87,14 +125,23 @@ if [[ -n "${CAM_FORK_PATH}" ]]; then
 fi
 
 # ---- STOP settings ----
-STOP_OPTION="${STOP_OPTION_DEFAULT}"
+# Defaults depend on RUN_PROFILE unless overridden by CLI flags.
 if [[ "${RUN_PROFILE}" == "short" ]]; then
-  STOP_OPTION="ndays"; STOP_N="${STOP_N_SHORT_DEFAULT}"
+  STOP_OPTION="ndays"
+  STOP_N="1"
 else
-  STOP_N="${STOP_N_LONG_DEFAULT}"
+  STOP_OPTION="nmonths"
+  STOP_N="2"
+  WALLTIME="06:00:00"
+  PECOUNT="2150"
 fi
 
+# Apply explicit overrides if provided
+if [[ -n "${STOP_N_OVERRIDE}" ]]; then STOP_N="${STOP_N_OVERRIDE}"; fi
+if [[ -n "${STOP_OPTION_OVERRIDE}" ]]; then STOP_OPTION="${STOP_OPTION_OVERRIDE}"; fi
+
 # ---- Determine cime/scripts location ----
+
 CIME_SCRIPTS=""
 if [[ -n "${CAM_FORK_PATH}" && -d "${CAM_FORK_PATH}/cime/scripts" ]]; then
   CIME_SCRIPTS="${CAM_FORK_PATH}/cime/scripts"
@@ -112,16 +159,23 @@ Tip: set --use-fork to your CESM fork containing cime/scripts, or adjust CESM_RO
 # ---- Paths ----
 CASEDIR="/glade/derecho/scratch/${USER}/${CASE_NAME}"
 
+# ---- Optional switches ----
+if [[ "${CHEMISTRY}" == "true" ]]; then
+  COMPSET="FHISTC_MTt4s"
+fi
+
 # ---- Echo config ----
 echo "[fmt-ne30pg3] CASE_NAME=${CASE_NAME}"
 echo "[fmt-ne30pg3] RUN_PROFILE=${RUN_PROFILE}"
 echo "[fmt-ne30pg3] SKIP_BUILD=${SKIP_BUILD}"
+echo "[fmt-ne30pg3] CHEMISTRY=${CHEMISTRY}, PERFORMANCE_ANALYSIS=${PERF_ANALYSIS}"
 echo "[fmt-ne30pg3] CAM_FORK_PATH=${CAM_FORK_PATH:-<none>}"
 echo "[fmt-ne30pg3] STOP_OPTION=${STOP_OPTION}, STOP_N=${STOP_N}"
 echo "[fmt-ne30pg3] PROJECT=${PROJECT}, CESM_ROOT=${CESM_ROOT}"
 echo "[fmt-ne30pg3] CIME_SCRIPTS=${CIME_SCRIPTS}"
 echo "[fmt-ne30pg3] MACHINE=${MACHINE}, QUEUE=${QUEUE}, WALLTIME=${WALLTIME}"
 echo "[fmt-ne30pg3] COMPSET=${COMPSET}, RES=${RES}"
+echo "[fmt-ne30pg3] PECOUNT=${PECOUNT}"
 echo "[fmt-ne30pg3] CASEDIR=${CASEDIR}"
 
 # ---- Create case ----
@@ -137,6 +191,7 @@ fi
   --project "${PROJECT}" \
   --queue "${QUEUE}" \
   --walltime "${WALLTIME}" \
+  --pecount "${PECOUNT}" \
   --run-unsupported
 
 cd "${CASEDIR}"
@@ -206,11 +261,11 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 'so4_a1_CLXF', 'so4_a2_CLXF', 'SFbc_a4', 'SFpom_a4', 'SFso4_a1', 'SFso4_a2',
 'so4_a1_sfgaex1', 'so4_a2_sfgaex1', 'so4_a3_sfgaex1', 'soa_a1_sfgaex1', 'soa_a2_sfgaex1',
 'SFdst_a1','SFdst_a2', 'SFdst_a3', 'SFncl_a1', 'SFncl_a2', 'SFncl_a3',
-'num_a2_sfnnuc1', 'SFSO2', 'OCN_FLUX_DMS', 'SAD_SULFC', 'SAD_TROP', 'SAD_AERO', 'vIVT'
-fincl2 ='FISCCP1_COSP','CLDTOT_ISCCP','MEANCLDALB_ISCCP','CLDLOW_CAL','CLDMED_CAL','CLDHGH_CAL','CLDTOT_CAL',
-'CLDTOT_CAL_ICE','CLDTOT_CAL_LIQ','CLDTOT_CAL_UN','CLD_CAL','CLD_CAL_LIQ','CLD_CAL_ICE','CLD_CAL_UN',
-'CLDTOT_CALCS','CLDTOT_CS','CLD_MISR','CLTMODIS','CLWMODIS','CLIMODIS','CLHMODIS','CLMMODIS','CLLMODIS',
-'LWPMODIS','IWPMODIS','CLMODIS'
+'num_a2_sfnnuc1', 'SFSO2', 'OCN_FLUX_DMS', 'SAD_SULFC', 'SAD_TROP', 'SAD_AERO', 'vIVT','ABS_dPSdt'
+!fincl2 ='FISCCP1_COSP','CLDTOT_ISCCP','MEANCLDALB_ISCCP','CLDLOW_CAL','CLDMED_CAL','CLDHGH_CAL','CLDTOT_CAL',
+!'CLDTOT_CAL_ICE','CLDTOT_CAL_LIQ','CLDTOT_CAL_UN','CLD_CAL','CLD_CAL_LIQ','CLD_CAL_ICE','CLD_CAL_UN',
+!'CLDTOT_CALCS','CLDTOT_CS','CLD_MISR','CLTMODIS','CLWMODIS','CLIMODIS','CLHMODIS','CLMMODIS','CLLMODIS',
+!'LWPMODIS','IWPMODIS','CLMODIS'
 
 fincl3 = 'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST', 'PSL'
 fincl4 =  'PRECC','PRECL'
@@ -228,6 +283,16 @@ NL
 fi
 
 echo "[fmt-ne30pg3] Wrote user_nl_cam with requested settings for RUN_PROFILE=${RUN_PROFILE}."
+
+# If performance analysis requested, strip all fincl* lines to avoid I/O
+if [[ "${PERF_ANALYSIS}" == "true" ]]; then
+  if [[ -f user_nl_cam ]]; then
+    # Remove lines that start with optional whitespace followed by fincl plus optional digits
+    sed -i -E '/^[[:space:]]*fincl[0-9]*[[:space:]]*=.*/d' user_nl_cam
+    echo "[fmt-ne30pg3] --performance_analysis: removed fincl* lines from user_nl_cam."
+  fi
+fi
+
 
 # Now run setup
 ./case.setup
