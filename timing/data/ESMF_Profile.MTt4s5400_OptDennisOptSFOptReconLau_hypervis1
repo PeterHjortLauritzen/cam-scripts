@@ -1,0 +1,689 @@
+Region                                                                                  PETs   PEs    Count    Mean (s)    Min (s)     Min PET Max (s)     Max PET
+  [ESMF]                                                                                5504   5504   1        200.8315    157.7371    5458    201.6643    140    
+    [ensemble] Init 1                                                                   5504   5504   1        157.0767    157.0258    1498    157.0861    502    
+      [ESM0001] IPDv02p3                                                                5504   5504   1        127.2666    126.2049    5455    127.2889    3175   
+        [ATM] IPDv03p3                                                                  5400   5400   1        104.9486    104.9421    1993    104.9543    2833   
+          get_decomp                                                                    5400   5400   157      0.0266      0.0227      5051    0.0395      257    
+            newdecomp                                                                   5400   5400   5        0.0257      0.0217      1357    0.0376      257    
+            get_filemap                                                                 5400   5400   5        0.0000      0.0000      1605    0.0002      2721   
+          shr_reprosum_int                                                              5400   5400   6        0.0130      0.0081      2170    0.0239      5392   
+            repro_sum_allr_minmax                                                       5400   5400   6        0.0092      0.0043      2670    0.0202      5392   
+            repro_sum_allr_i8                                                           5400   5400   6        0.0023      0.0007      2452    0.0036      5376   
+            repro_sum_loopb                                                             5400   5400   6        0.0005      0.0000      963     0.0020      2452   
+            repro_sum_loopa                                                             5400   5400   6        0.0001      0.0000      9       0.0013      4126   
+          gmean_arr                                                                     5400   5400   5        0.0067      0.0023      2778    0.0089      5390   
+            gmean_fixed_repro                                                           5400   5400   5        0.0067      0.0023      2778    0.0089      5390   
+              shr_reprosum_int                                                          5400   5400   5        0.0067      0.0023      2778    0.0089      5390   
+                repro_sum_allr_minmax                                                   5400   5400   5        0.0064      0.0020      2778    0.0087      5390   
+                repro_sum_allr_i8                                                       5400   5400   5        0.0002      0.0002      357     0.0003      2669   
+                repro_sum_loopb                                                         5400   5400   5        0.0000      0.0000      1744    0.0000      3188   
+                repro_sum_loopa                                                         5400   5400   5        0.0000      0.0000      1685    0.0000      919    
+              shr_reprosum_INF_NaN_Chk                                                  5400   5400   5        0.0000      0.0000      569     0.0000      5221   
+          phys_grid_init                                                                5400   5400   1        0.0031      0.0000      4956    0.0077      1930   
+          parallelMin                                                                   5400   5400   1        0.0028      0.0000      4575    0.0042      1113   
+          shr_reprosum_INF_NaN_Chk                                                      5400   5400   6        0.0003      0.0000      3179    0.0015      4216   
+        [LND] IPDv01p3                                                                  5400   5400   1        15.4044     15.3977     2535    15.4085     3179   
+          clm_init2                                                                     5400   5400   1        14.2153     14.2087     4684    14.2199     2037   
+            init_dyn_subgrid                                                            5400   5400   1        2.9409      2.9365      4838    2.9450      971    
+            readMonthlyVeg                                                              5400   5400   1        0.7647      0.7640      283     0.7659      5377   
+            hdmdyn_strd_adv_total                                                       5400   5400   1        0.6757      0.6724      5351    0.6790      2058   
+              hdmdyn_strd_adv_readLBUB                                                  5400   5400   1        0.6747      0.6720      1182    0.6774      1891   
+                hdmdyn_readLBUB_fbound                                                  5400   5400   1        0.6249      0.6226      2584    0.6305      5183   
+                hdmdyn_readLBUB_LB_readpio                                              5400   5400   1        0.0117      0.0103      380     0.0142      383    
+                hdmdyn_readLBUB_UB_readpio                                              5400   5400   1        0.0041      0.0014      383     0.0042      3414   
+                hdmdyn_readLBUB_setup                                                   5400   5400   1        0.0000      0.0000      625     0.0000      2391   
+                hdmdyn_readLBUB_filemgt                                                 5400   5400   1        0.0000      0.0000      685     0.0001      0      
+              hdmdyn_strd_adv_tint                                                      5400   5400   1        0.0006      0.0000      582     0.0028      2339   
+            prigentrghn_strd_adv_total                                                  5400   5400   1        0.0726      0.0718      0       0.0728      5393   
+              prigentrghn_strd_adv_readLBUB                                             5400   5400   1        0.0726      0.0718      0       0.0728      5393   
+                prigentrghn_readLBUB_LB_readpio                                         5400   5400   1        0.0424      0.0409      1281    0.0430      968    
+                prigentrghn_readLBUB_fbound                                             5400   5400   1        0.0198      0.0188      0       0.0200      5399   
+                prigentrghn_readLBUB_UB_readpio                                         5400   5400   1        0.0058      0.0056      4353    0.0063      1286   
+                prigentrghn_readLBUB_setup                                              5400   5400   1        0.0000      0.0000      0       0.0000      4178   
+                prigentrghn_readLBUB_filemgt                                            5400   5400   1        0.0000      0.0000      3037    0.0001      0      
+              prigentrghn_strd_adv_tint                                                 5400   5400   1        0.0000      0.0000      1616    0.0000      3940   
+            clm_decompInit_clumps                                                       5400   5400   1        0.0660      0.0653      665     0.0660      1238   
+            clm_decompInit_glcp                                                         5400   5400   1        0.0079      0.0048      2684    0.0130      226    
+            init_map2gc                                                                 5400   5400   1        0.0033      0.0001      5382    0.0064      626    
+            init_accflds                                                                5400   5400   1        0.0025      0.0002      5267    0.0061      3954   
+            init_orbd                                                                   5400   5400   1        0.0009      0.0000      2205    0.0031      207    
+            init_lnd2glc                                                                5400   5400   1        0.0000      0.0000      3689    0.0000      775    
+            init_wlog                                                                   5400   5400   1        0.0000      0.0000      489     0.0000      0      
+          clm_init1                                                                     5400   5400   1        0.6073      0.6041      2486    0.6103      132    
+          lc_lnd_set_decomp_and_domain_from_readmesh                                    5400   5400   1        0.5566      0.5552      5349    0.5597      1687   
+        [OCN] IPDv01p3                                                                  5400   5400   1        1.6755      1.6716      2048    1.6806      3057   
+          docn_strdata_init                                                             5400   5400   1        0.9544      0.9511      2262    0.9586      4069   
+          DOCN_RUN                                                                      5400   5400   1        0.7163      0.7144      2995    0.7184      4847   
+            docn_strdata_advance                                                        5400   5400   1        0.7152      0.7136      2995    0.7168      112    
+              docn_strd_adv_total                                                       5400   5400   1        0.7152      0.7136      2995    0.7168      112    
+                docn_strd_adv_readLBUB                                                  5400   5400   1        0.7152      0.7136      2995    0.7168      112    
+                  docn_readLBUB_fbound                                                  5400   5400   1        0.6831      0.6815      2995    0.6846      3259   
+                  docn_readLBUB_LB_readpio                                              5400   5400   1        0.0022      0.0019      4611    0.0032      3915   
+                  docn_readLBUB_UB_readpio                                              5400   5400   1        0.0016      0.0005      3915    0.0017      4729   
+                  docn_readLBUB_setup                                                   5400   5400   1        0.0000      0.0000      2320    0.0000      4131   
+                  docn_readLBUB_filemgt                                                 5400   5400   1        0.0000      0.0000      578     0.0001      0      
+                docn_strd_adv_tint                                                      5400   5400   1        0.0000      0.0000      329     0.0000      2991   
+            docn_dfield_copy                                                            5400   5400   1        0.0010      0.0000      4008    0.0019      4982   
+        [ROF] IPDv01p3                                                                  5400   5400   1        1.4855      1.4789      4113    1.4895      4534   
+          mosarti_mosart_init                                                           5400   5400   1        0.7687      0.7626      2119    0.7729      4527   
+            mosarti_histinit                                                            5400   5400   1        0.0045      0.0009      339     0.0072      4907   
+            mosarti_restart                                                             5400   5400   1        0.0005      0.0000      169     0.0018      482    
+            mosarti_budgetinit                                                          5400   5400   1        0.0001      0.0000      169     0.0012      4729   
+          mosarti_decomp                                                                5400   5400   1        0.0397      0.0375      1517    0.0409      2944   
+        [ICE] IPDv01p3                                                                  5400   5400   1        0.5843      0.5775      1727    0.5905      2696   
+          cice_init2                                                                    5400   5400   1        0.0869      0.0764      878     0.0945      2574   
+        [MED] IPDv03p4                                                                  5400   5400   1        0.3287      0.3197      3323    0.3305      1308   
+        [MED-TO-ROF] IPDv05p5                                                           5400   5400   1        0.2231      0.1964      1198    0.2249      2030   
+        [LND-TO-MED] IPDv05p6b                                                          5400   5400   1        0.1528      0.1528      309     0.1529      2978   
+        [ICE-TO-MED] IPDv05p6b                                                          5400   5400   1        0.1461      0.1461      2108    0.1462      4660   
+        [ICE-TO-MED] IPDv05p4                                                           5400   5400   1        0.1394      0.1316      4813    0.1697      2182   
+        [MED-TO-ATM] IPDv05p6b                                                          5400   5400   1        0.1373      0.1370      5377    0.1381      1987   
+        [MED-TO-LND] IPDv05p6b                                                          5400   5400   1        0.1344      0.1337      1987    0.1348      5393   
+        [LND-TO-MED] IPDv05p4                                                           5400   5400   1        0.1323      0.1250      4102    0.1411      3541   
+        [MED-TO-ATM] IPDv05p4                                                           5400   5400   1        0.1223      0.1169      70      0.1291      970    
+        [MED-TO-ICE] IPDv05p6b                                                          5400   5400   1        0.1203      0.1202      3456    0.1203      2192   
+        [OCN-TO-MED] IPDv05p4                                                           5400   5400   1        0.1199      0.0953      2182    0.1299      5299   
+        [MED-TO-LND] IPDv05p4                                                           5400   5400   1        0.1187      0.1120      279     0.1253      2242   
+        [ATM-TO-MED] IPDv05p6b                                                          5400   5400   1        0.1147      0.1147      875     0.1147      2201   
+        [MED-TO-ICE] IPDv05p4                                                           5400   5400   1        0.1105      0.1036      2242    0.1168      2208   
+        [ATM-TO-MED] IPDv05p4                                                           5400   5400   1        0.0931      0.0863      1813    0.1007      5382   
+        [MED-TO-ROF] IPDv05p6b                                                          5400   5400   1        0.0926      0.0925      2069    0.0926      1422   
+        [ROF-TO-MED] IPDv05p6b                                                          5400   5400   1        0.0908      0.0907      579     0.0910      4738   
+        [ROF-TO-MED] IPDv05p4                                                           5400   5400   1        0.0894      0.0805      5299    0.0988      3323   
+        [MED-TO-ROF] IPDv05p4                                                           5400   5400   1        0.0857      0.0777      1821    0.0919      296    
+        [ICE-TO-MED] IPDv05p5                                                           5400   5400   1        0.0845      0.0734      2634    0.0957      4740   
+        [LND-TO-MED] IPDv05p5                                                           5400   5400   1        0.0817      0.0781      2536    0.0928      4720   
+        [OCN-TO-MED] IPDv05p6b                                                          5400   5400   1        0.0798      0.0798      2503    0.0798      2154   
+        [ROF-TO-MED] IPDv05p5                                                           5400   5400   1        0.0723      0.0708      4074    0.0754      1887   
+        [MED-TO-LND] IPDv05p5                                                           5400   5400   1        0.0680      0.0591      892     0.0770      1367   
+        [MED-TO-ATM] IPDv05p5                                                           5400   5400   1        0.0667      0.0652      4695    0.0757      892    
+        [MED-TO-ICE] IPDv05p5                                                           5400   5400   1        0.0540      0.0451      2866    0.0811      1198   
+        [OCN-TO-MED] IPDv05p5                                                           5400   5400   1        0.0376      0.0266      4740    0.0393      4976   
+        [ATM-TO-MED] IPDv05p5                                                           5400   5400   1        0.0345      0.0331      2556    0.0374      3076   
+        [MED] IPDv03p5                                                                  5400   5400   1        0.0260      0.0225      4901    0.0312      251    
+        [MED] IPDv03p3                                                                  5400   5400   1        0.0109      0.0080      1793    0.0147      1993   
+        [MED-TO-ATM] IPDv05p6a                                                          5400   5400   1        0.0048      0.0004      251     0.0066      438    
+        [MED-TO-LND] IPDv05p6a                                                          5400   5400   1        0.0019      0.0003      3442    0.0023      1929   
+        [LND] IPDv01p4                                                                  5400   5400   1        0.0011      0.0004      5389    0.0028      2293   
+        [MED] IPDv03p6                                                                  5400   5400   1        0.0006      0.0005      97      0.0007      5381   
+        [MED-TO-ICE] IPDv05p6a                                                          5400   5400   1        0.0003      0.0003      5377    0.0004      1735   
+        [ATM-TO-MED] IPDv05p6a                                                          5400   5400   1        0.0003      0.0003      1791    0.0004      297    
+        [ICE-TO-MED] IPDv05p6a                                                          5400   5400   1        0.0003      0.0003      251     0.0003      2430   
+        [LND-TO-MED] IPDv05p6a                                                          5400   5400   1        0.0003      0.0003      562     0.0003      217    
+        [OCN-TO-MED] IPDv05p6a                                                          5400   5400   1        0.0002      0.0002      2301    0.0002      4421   
+        [ROF-TO-MED] IPDv05p6a                                                          5400   5400   1        0.0002      0.0002      296     0.0002      2777   
+        [MED-TO-ROF] IPDv05p6a                                                          5400   5400   1        0.0002      0.0002      327     0.0002      3236   
+        [ATM] IPDv03p6                                                                  5400   5400   1        0.0002      0.0002      2594    0.0003      3675   
+        [ICE] IPDv01p4                                                                  5400   5400   1        0.0002      0.0002      1768    0.0003      3507   
+        [ROF] IPDv01p4                                                                  5400   5400   1        0.0001      0.0001      3090    0.0001      3474   
+        [ESM0001] IPDv05p4                                                              5504   5504   1        0.0001      0.0000      5445    0.0015      1      
+        [ESM0001] IPDv05p6                                                              5504   5504   1        0.0001      0.0000      1657    0.0005      5462   
+        [OCN] IPDv01p4                                                                  5400   5400   1        0.0001      0.0000      3635    0.0002      3556   
+      [ESM0001] IPDv02p5                                                                5504   5504   1        25.2095     25.2079     4760    25.2111     5342   
+        [ATM] IPDv03p7                                                                  5400   5400   2        16.9337     16.9037     821     16.9567     3752   
+          phys_run1                                                                     5400   5400   1        16.4236     16.2041     2051    16.8549     5385   
+            physpkg_st1                                                                 5400   5400   1        16.3280     16.1214     1668    16.7415     5392   
+              advance_trcdata                                                           5400   5400   83       16.1152     16.1123     5251    16.1180     3807   
+                read_next_trcdata                                                       5400   5400   83       16.1119     16.1084     4517    16.1159     3084   
+                  get_decomp                                                            5400   5400   204      0.0104      0.0096      217     0.0169      1      
+                    newdecomp                                                           5400   5400   3        0.0097      0.0089      217     0.0149      2049   
+                    get_filemap                                                         5400   5400   3        0.0000      0.0000      1291    0.0000      1      
+                interpolate_trcdata                                                     5400   5400   83       0.0026      0.0003      5395    0.0044      4891   
+              chk_en_gmean                                                              5400   5400   1        0.2055      0.0002      1701    0.6224      5377   
+                gmean_arr                                                               5400   5400   1        0.2055      0.0002      1701    0.6224      5377   
+                  gmean_fixed_repro                                                     5400   5400   1        0.2055      0.0002      1701    0.6224      5377   
+                    shr_reprosum_int                                                    5400   5400   1        0.2055      0.0002      1701    0.6224      5377   
+                      repro_sum_allr_minmax                                             5400   5400   1        0.2054      0.0001      1701    0.6223      5377   
+                      repro_sum_allr_i8                                                 5400   5400   1        0.0001      0.0000      5222    0.0001      1694   
+                      repro_sum_loopb                                                   5400   5400   1        0.0000      0.0000      1699    0.0000      4777   
+                      repro_sum_loopa                                                   5400   5400   1        0.0000      0.0000      5268    0.0000      714    
+                    shr_reprosum_INF_NaN_Chk                                            5400   5400   1        0.0000      0.0000      2218    0.0000      5384   
+              gmean_arr                                                                 5400   5400   5        0.0015      0.0004      2068    0.0032      5383   
+                gmean_fixed_repro                                                       5400   5400   5        0.0015      0.0004      2068    0.0032      5383   
+                  shr_reprosum_int                                                      5400   5400   5        0.0015      0.0004      2068    0.0032      5383   
+                    repro_sum_allr_minmax                                               5400   5400   5        0.0013      0.0002      2068    0.0030      5383   
+                    repro_sum_allr_i8                                                   5400   5400   5        0.0002      0.0002      4252    0.0002      510    
+                    repro_sum_loopb                                                     5400   5400   5        0.0000      0.0000      2770    0.0000      5381   
+                    repro_sum_loopa                                                     5400   5400   5        0.0000      0.0000      2383    0.0000      1096   
+                  shr_reprosum_INF_NaN_Chk                                              5400   5400   5        0.0000      0.0000      4867    0.0000      405    
+            bc_physics                                                                  5400   5400   1        0.0956      0.0664      841     0.1208      5352   
+              moist_convection                                                          5400   5400   1        0.0162      0.0098      1037    0.0361      1346   
+                convect_deep_tend                                                       5400   5400   1        0.0159      0.0094      5005    0.0357      1346   
+                  zm_convr_run                                                          5400   5400   1        0.0057      0.0020      5394    0.0116      3157   
+                  zm_conv_momtran_run                                                   5400   5400   1        0.0009      0.0001      5399    0.0029      1459   
+                  zm_conv_evap_run                                                      5400   5400   1        0.0009      0.0001      5399    0.0031      3855   
+                  convtran1                                                             5400   5400   1        0.0007      0.0002      5399    0.0022      228    
+                  qneg3                                                                 5400   5400   9        0.0000      0.0000      2113    0.0001      5089   
+              energy_fixer                                                              5400   5400   1        0.0025      0.0001      3346    0.0065      1934   
+              dry_adjustment                                                            5400   5400   1        0.0019      0.0003      1023    0.0041      2192   
+                qneg3                                                                   5400   5400   1        0.0001      0.0000      3859    0.0008      488    
+              bc_init                                                                   5400   5400   1        0.0012      0.0003      3750    0.0033      1542   
+                qneg3                                                                   5400   5400   1        0.0003      0.0002      4469    0.0013      5377   
+              diag_physvar_ic                                                           5400   5400   1        0.0002      0.0000      649     0.0015      1679   
+              cam_export                                                                5400   5400   1        0.0000      0.0000      2030    0.0009      1965   
+              diag_export                                                               5400   5400   1        0.0000      0.0000      1153    0.0000      2949   
+          stepon_run1                                                                   5400   5400   1        0.5064      0.0916      5380    0.7126      1701   
+            d_p_coupling                                                                5400   5400   1        0.5059      0.0915      5380    0.7122      1668   
+              derived_phys                                                              5400   5400   1        0.4946      0.0791      5377    0.7016      1759   
+                qneg3                                                                   5400   5400   1        0.0003      0.0003      3032    0.0006      5389   
+              dpcopy                                                                    5400   5400   1        0.0027      0.0007      1352    0.0049      2934   
+              dyn2phys                                                                  5400   5400   1        0.0020      0.0005      5397    0.0057      485    
+        [MED] IPDv03p7                                                                  5400   5400   3        8.2248      8.2198      3876    8.2295      169    
+          MED: (med_map_mod: RouteHandles_init)                                         5400   5400   1        7.4722      7.4691      4834    7.4758      2817   
+          MED: (med_fraction_init)                                                      5400   5400   2        0.6600      0.6583      5220    0.6616      6      
+            MED: (med_map_mod:med_map_routehandles_initfrom_fieldbundle)                5400   5400   2        0.6505      0.6481      5269    0.6516      3427   
+          MED:(med_phases_post_atm)                                                     5400   5400   1        0.0044      0.0011      5249    0.0074      2566   
+            MED:(med_phases_post_atm) map_atm2lnd                                       5400   5400   1        0.0028      0.0001      4481    0.0069      899    
+              MED: (med_map_mod:med_map_field_packed)                                   5400   5400   1        0.0028      0.0001      4481    0.0069      899    
+                MED: (med_map_mod:med_map_field_packed) map                             5400   5400   1        0.0028      0.0000      4481    0.0069      899    
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    5400   5400   1        0.0000      0.0000      3993    0.0000      5277   
+                MED: (med_map_mod:med_map_field_packed) copy from src                   5400   5400   1        0.0000      0.0000      3042    0.0000      4128   
+            MED:(med_phases_post_atm) map_atm2ice                                       5400   5400   1        0.0009      0.0001      3600    0.0047      5090   
+              MED: (med_map_mod:med_map_field_packed)                                   5400   5400   1        0.0009      0.0001      3600    0.0047      5090   
+                MED: (med_map_mod:med_map_field_packed) map                             5400   5400   1        0.0008      0.0000      3600    0.0046      5090   
+                MED: (med_map_mod:med_map_field_packed) copy from src                   5400   5400   1        0.0000      0.0000      2308    0.0000      4383   
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    5400   5400   1        0.0000      0.0000      3555    0.0000      1025   
+            MED:(med_phases_post_atm) map_atm2ocn                                       5400   5400   1        0.0007      0.0001      3600    0.0041      548    
+              MED: (med_map_mod:med_map_field_packed)                                   5400   5400   1        0.0007      0.0001      3600    0.0041      548    
+                MED: (med_map_mod:med_map_field_packed) map                             5400   5400   1        0.0006      0.0000      3843    0.0041      548    
+                MED: (med_map_mod:med_map_field_packed) copy from src                   5400   5400   1        0.0000      0.0000      1404    0.0000      4038   
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    5400   5400   1        0.0000      0.0000      4464    0.0000      4374   
+          MED:(med_phases_post_rof)                                                     5400   5400   1        0.0026      0.0015      2138    0.0036      2728   
+            MED:(med_phases_post_rof) map_rof2lnd                                       5400   5400   1        0.0015      0.0008      441     0.0018      5153   
+              MED: (med_map_mod:med_map_field_packed)                                   5400   5400   1        0.0015      0.0008      441     0.0018      5153   
+                MED: (med_map_mod:med_map_field_packed) map                             5400   5400   1        0.0014      0.0008      441     0.0018      5153   
+                MED: (med_map_mod:med_map_field_packed) copy from src                   5400   5400   1        0.0000      0.0000      5212    0.0000      4154   
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    5400   5400   1        0.0000      0.0000      3492    0.0000      5150   
+            MED:(med_phases_post_rof_mod: med_phases_post_rof_remove_negative_runoff)   5400   5400   2        0.0010      0.0002      2131    0.0020      2728   
+            MED:(med_phases_post_rof) map_rof2ice                                       5400   5400   1        0.0000      0.0000      555     0.0000      5137   
+              MED: (med_map_mod:med_map_field_packed)                                   5400   5400   1        0.0000      0.0000      555     0.0000      5137   
+          MED:(med_phases_prep_atm)                                                     5400   5400   1        0.0024      0.0009      1738    0.0054      1881   
+            MED: (med_map_mod:med_map_field_packed)                                     5400   5400   4        0.0009      0.0002      1738    0.0046      5386   
+              MED: (med_map_mod:med_map_field_packed) map                               5400   5400   3        0.0007      0.0000      1738    0.0044      5386   
+              MED: (med_map_mod:med_map_field_packed) copy from src                     5400   5400   3        0.0000      0.0000      446     0.0001      3710   
+              MED: (med_map_mod:med_map_field_packed) copy to dest                      5400   5400   3        0.0000      0.0000      2362    0.0000      3669   
+            MED: (module_med_merge_mod: med_merge_auto)                                 5400   5400   1        0.0005      0.0002      420     0.0024      3300   
+          MED:(med_phases_ocnalb_run)                                                   5400   5400   2        0.0023      0.0012      2096    0.0044      5198   
+            MED:(med_phases_ocnalb_init)                                                5400   5400   1        0.0002      0.0001      1456    0.0015      275    
+          MED:(med_phases_post_lnd)                                                     5400   5400   2        0.0017      0.0002      4841    0.0052      2669   
+            MED: (med_map_mod:med_map_field_packed)                                     5400   5400   2        0.0017      0.0002      4841    0.0052      2669   
+              MED: (med_map_mod:med_map_field_packed) map                               5400   5400   2        0.0012      0.0000      5298    0.0049      2669   
+              MED: (med_map_mod:med_map_field_packed) copy from src                     5400   5400   2        0.0001      0.0000      2328    0.0009      5049   
+              MED: (med_map_mod:med_map_field_packed) copy to dest                      5400   5400   2        0.0000      0.0000      5202    0.0001      1614   
+          MED: (med_fraction_set)                                                       5400   5400   2        0.0008      0.0001      1799    0.0034      2446   
+            MED: (med_fraction_set) fbfrac(compatm)                                     5400   5400   2        0.0005      0.0000      1791    0.0034      2446   
+            MED: (med_fraction_set) fbfrac(compocn)                                     5400   5400   2        0.0000      0.0000      1694    0.0001      4252   
+          MED:(med_phases_post_rof_init)                                                5400   5400   1        0.0005      0.0004      3318    0.0011      1828   
+            MED:(med_phases_post_rof_mod: med_phases_post_rof_create_rof_field_bundle)  5400   5400   1        0.0004      0.0003      3147    0.0009      1828   
+          MED:(med_phases_post_ice)                                                     5400   5400   1        0.0005      0.0000      3600    0.0041      3563   
+            MED: (med_fraction_set)                                                     5400   5400   1        0.0005      0.0000      3600    0.0041      3563   
+              MED: (med_fraction_set) fbfrac(compatm)                                   5400   5400   1        0.0004      0.0000      3634    0.0041      3563   
+              MED: (med_fraction_set) fbfrac(compocn)                                   5400   5400   1        0.0000      0.0000      664     0.0000      5290   
+          MED:(med_phases_profile)                                                      5400   5400   1        0.0002      0.0001      462     0.0012      2343   
+          MED:(med_phases_post_ocn)                                                     5400   5400   1        0.0001      0.0000      1304    0.0001      5136   
+            MED:(med_phases_post_ocn) map_ocn2ice                                       5400   5400   1        0.0001      0.0000      1304    0.0001      5136   
+              MED: (med_map_mod:med_map_field_packed)                                   5400   5400   1        0.0001      0.0000      1304    0.0001      5136   
+                MED: (med_map_mod:med_map_field_packed) map                             5400   5400   1        0.0000      0.0000      42      0.0000      2514   
+                MED: (med_map_mod:med_map_field_packed) copy from src                   5400   5400   1        0.0000      0.0000      4341    0.0000      2314   
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    5400   5400   1        0.0000      0.0000      2172    0.0000      4365   
+        [LND-TO-MED] RunPhase1                                                          5400   5400   2        0.0025      0.0005      0       0.0042      5037   
+        [ATM-TO-MED] RunPhase1                                                          5400   5400   2        0.0021      0.0008      5037    0.0041      1702   
+        [ICE-TO-MED] RunPhase1                                                          5400   5400   2        0.0004      0.0004      5398    0.0006      3957   
+        [MED-TO-ATM] RunPhase1                                                          5400   5400   1        0.0003      0.0002      5121    0.0004      4305   
+        [OCN-TO-MED] RunPhase1                                                          5400   5400   2        0.0002      0.0002      1676    0.0003      3875   
+        [ROF-TO-MED] RunPhase1                                                          5400   5400   2        0.0002      0.0002      909     0.0003      1595   
+        [LND] IPDv01p5                                                                  5400   5400   1        0.0002      0.0001      4867    0.0018      4749   
+        [ICE] IPDv01p5                                                                  5400   5400   1        0.0001      0.0001      2978    0.0002      3712   
+        [ROF] IPDv01p5                                                                  5400   5400   1        0.0001      0.0001      3488    0.0001      4639   
+        [OCN] IPDv01p5                                                                  5400   5400   1        0.0001      0.0001      1408    0.0001      4710   
+        [ESM0001] IPDv05p8                                                              5504   5504   1        0.0000      0.0000      1029    0.0001      3112   
+      [ESM0001] IPDv02p1                                                                5504   5504   1        4.1145      3.5570      5418    4.1281      945    
+        [ICE] IPDv01p1                                                                  5400   5400   1        0.6761      0.6726      754     0.6792      2400   
+          cice_init_total                                                               5400   5400   1        0.6411      0.6375      2715    0.6454      2372   
+            cice_init1                                                                  5400   5400   1        0.1474      0.1288      4388    0.1676      1434   
+        [LND] IPDv01p1                                                                  5400   5400   1        0.3395      0.3371      1732    0.3434      754    
+        [ROF] IPDv01p1                                                                  5400   5400   1        0.1421      0.1389      4826    0.1448      3840   
+        [ICE-TO-MED] IPDv05p3                                                           5400   5400   1        0.1054      0.1044      248     0.1077      5026   
+        [MED-TO-ATM] IPDv05p3                                                           5400   5400   1        0.0926      0.0908      980     0.0933      3541   
+        [MED-TO-LND] IPDv05p3                                                           5400   5400   1        0.0836      0.0834      1792    0.0846      1195   
+        [LND-TO-MED] IPDv05p3                                                           5400   5400   1        0.0793      0.0787      257     0.0802      3625   
+        [MED] IPDv03p1                                                                  5400   5400   1        0.0765      0.0717      3051    0.0841      1412   
+        [MED-TO-ICE] IPDv05p3                                                           5400   5400   1        0.0754      0.0744      1195    0.0760      145    
+        [ATM] IPDv03p1                                                                  5400   5400   1        0.0286      0.0209      1412    0.0367      4826   
+        [ATM-TO-MED] IPDv05p3                                                           5400   5400   1        0.0280      0.0270      358     0.0286      257    
+        [ROF-TO-MED] IPDv05p3                                                           5400   5400   1        0.0146      0.0140      1601    0.0155      1247   
+        [OCN-TO-MED] IPDv05p3                                                           5400   5400   1        0.0105      0.0082      5026    0.0111      4273   
+        [MED-TO-ROF] IPDv05p3                                                           5400   5400   1        0.0078      0.0072      145     0.0088      358    
+        [OCN] IPDv01p1                                                                  5400   5400   1        0.0073      0.0037      2400    0.0106      295    
+        [MED-TO-ATM] IPDv05p2a                                                          5400   5400   1        0.0059      0.0042      3601    0.0078      3947   
+        [MED-TO-LND] IPDv05p2a                                                          5400   5400   1        0.0049      0.0034      3877    0.0054      25     
+        [MED-TO-LND] IPDv05p2b                                                          5400   5400   1        0.0049      0.0036      3614    0.0053      2560   
+        [MED-TO-ATM] IPDv05p2b                                                          5400   5400   1        0.0048      0.0039      3734    0.0063      3657   
+        [ICE-TO-MED] IPDv05p2b                                                          5400   5400   1        0.0041      0.0039      3200    0.0043      2048   
+        [MED-TO-ATM] IPDv05p1                                                           5400   5400   1        0.0041      0.0021      3570    0.0059      3586   
+        [ICE-TO-MED] IPDv05p2a                                                          5400   5400   1        0.0038      0.0036      1280    0.0039      2944   
+        [MED-TO-ICE] IPDv05p2b                                                          5400   5400   1        0.0036      0.0033      2560    0.0046      5057   
+        [MED-TO-ICE] IPDv05p2a                                                          5400   5400   1        0.0035      0.0033      1498    0.0037      512    
+        [ATM-TO-MED] IPDv05p2a                                                          5400   5400   1        0.0033      0.0031      128     0.0035      1792   
+        [ATM-TO-MED] IPDv05p2b                                                          5400   5400   1        0.0032      0.0030      3456    0.0035      2432   
+        [LND-TO-MED] IPDv05p2b                                                          5400   5400   1        0.0030      0.0027      2432    0.0035      1056   
+        [LND-TO-MED] IPDv05p2a                                                          5400   5400   1        0.0029      0.0027      1792    0.0031      768    
+        [MED-TO-ROF] IPDv05p2b                                                          5400   5400   1        0.0024      0.0015      5057    0.0027      3456   
+        [MED-TO-LND] IPDv05p1                                                           5400   5400   1        0.0021      0.0005      3586    0.0029      5382   
+        [MED-TO-ROF] IPDv05p2a                                                          5400   5400   1        0.0017      0.0014      512     0.0019      128    
+        [OCN-TO-MED] IPDv05p2b                                                          5400   5400   1        0.0014      0.0011      1056    0.0016      639    
+        [ROF-TO-MED] IPDv05p2b                                                          5400   5400   1        0.0014      0.0012      2944    0.0016      1280   
+        [ROF-TO-MED] IPDv05p2a                                                          5400   5400   1        0.0014      0.0012      4608    0.0015      4992   
+        [OCN-TO-MED] IPDv05p2a                                                          5400   5400   1        0.0014      0.0011      54      0.0016      4608   
+        [ESM0001] IPDv05p3                                                              5504   5504   1        0.0012      0.0002      5463    0.0029      901    
+        [ESM0001] IPDv05p2                                                              5504   5504   1        0.0007      0.0001      5446    0.0023      3699   
+        [ICE-TO-MED] IPDv05p1                                                           5400   5400   1        0.0006      0.0005      1506    0.0006      77     
+        [MED-TO-ICE] IPDv05p1                                                           5400   5400   1        0.0006      0.0005      2492    0.0006      4213   
+        [MED] Init 0                                                                    5400   5400   1        0.0005      0.0002      5396    0.0032      0      
+        [ESM0001] IPDv03p2                                                              5504   5504   1        0.0005      0.0001      5432    0.0008      5424   
+        [ATM-TO-MED] IPDv05p1                                                           5400   5400   1        0.0005      0.0005      3584    0.0005      561    
+        [LND-TO-MED] IPDv05p1                                                           5400   5400   1        0.0005      0.0005      5029    0.0005      1177   
+        [OCN-TO-MED] IPDv05p1                                                           5400   5400   1        0.0005      0.0004      3429    0.0005      798    
+        [MED-TO-ROF] IPDv05p1                                                           5400   5400   1        0.0004      0.0004      1583    0.0005      3588   
+        [ROF-TO-MED] IPDv05p1                                                           5400   5400   1        0.0004      0.0004      4925    0.0005      3218   
+        [ICE] Init 0                                                                    5400   5400   1        0.0002      0.0001      5036    0.0014      3572   
+        [ATM] Init 0                                                                    5400   5400   1        0.0002      0.0001      3431    0.0013      1679   
+        [MED-TO-LND] Init 0                                                             5400   5400   1        0.0002      0.0001      3958    0.0004      4710   
+        [LND] Init 0                                                                    5400   5400   1        0.0001      0.0001      2627    0.0010      1754   
+        [OCN-TO-MED] Init 0                                                             5400   5400   1        0.0001      0.0001      4076    0.0002      4864   
+        [MED-TO-ICE] Init 0                                                             5400   5400   1        0.0001      0.0001      4345    0.0002      4480   
+        [ICE-TO-MED] Init 0                                                             5400   5400   1        0.0001      0.0001      3357    0.0002      5178   
+        [MED-TO-ATM] Init 0                                                             5400   5400   1        0.0001      0.0001      4069    0.0002      751    
+        [LND-TO-MED] Init 0                                                             5400   5400   1        0.0001      0.0001      4069    0.0002      4133   
+        [OCN] Init 0                                                                    5400   5400   1        0.0001      0.0001      1191    0.0007      4048   
+        [ATM-TO-MED] Init 0                                                             5400   5400   1        0.0001      0.0001      4085    0.0002      745    
+        [MED-TO-ROF] Init 0                                                             5400   5400   1        0.0001      0.0001      585     0.0002      2312   
+        [ROF-TO-MED] Init 0                                                             5400   5400   1        0.0001      0.0001      4147    0.0002      3441   
+        [ROF] Init 0                                                                    5400   5400   1        0.0001      0.0001      1189    0.0008      4076   
+        [ESM0001] IPDv05p1                                                              5504   5504   1        0.0000      0.0000      617     0.0000      1035   
+      (ensemble_driver.F90:SetModelServices)                                            5504   5504   1        0.3612      0.3353      1831    0.3795      2510   
+      [ESM0001] Init 0                                                                  5504   5504   1        0.0001      0.0001      1803    0.0001      3334   
+      [ensemble] IPDv05p1                                                               5504   5504   1        0.0001      0.0000      5495    0.0001      1247   
+      [ensemble] IPDv05p3                                                               5504   5504   1        0.0000      0.0000      3904    0.0001      2397   
+      [ensemble] IPDv05p4                                                               5504   5504   1        0.0000      0.0000      4898    0.0001      4493   
+      [ensemble] IPDv05p2                                                               5504   5504   1        0.0000      0.0000      3515    0.0001      5385   
+      [ensemble] IPDv05p8                                                               5504   5504   1        0.0000      0.0000      4672    0.0001      4203   
+      [ensemble] IPDv05p6                                                               5504   5504   1        0.0000      0.0000      5277    0.0001      3829   
+    [ensemble] RunPhase1                                                                5504   5504   1        43.0998     0.0181      5501    43.9314     3153   
+      [ESM0001] RunPhase1                                                               5504   5504   1        43.0991     0.0176      5460    43.9310     3154   
+        [ATM] RunPhase1                                                                 5400   5400   48       33.7061     33.4854     5393    33.7766     3195   
+          CAM_run2                                                                      5400   5400   49       13.8466     13.2326     1969    14.2021     3906   
+            phys_run2                                                                   5400   5400   49       13.0613     8.6397      5393    13.7715     4414   
+              ac_physics                                                                5400   5400   49       12.9857     8.5652      5393    13.6873     4414   
+                macrop_tend                                                             5400   5400   147      3.7694      2.3116      5393    4.1414      3406   
+                  clubb_tend_cam                                                        5400   5400   147      3.3758      2.1273      5393    3.6808      3406   
+                    clubb_tend_cam:ACCR                                                 5400   5400   441      2.1895      1.5603      5393    2.4034      136    
+                      clubb_tend_cam:advance_clubb_core_api                             5400   5400   294      1.6211      1.2371      5394    1.7904      136    
+                      clubb_tend_cam:flip-index                                         5400   5400   294      0.3385      0.2063      5393    0.4872      5223   
+                    clubb_tend_cam:NAR                                                  5400   5400   588      1.1830      0.5641      5393    1.3704      3406   
+                      qneg3                                                             5400   5400   17052    0.0339      0.0295      5396    0.0378      5379   
+                    clubb_tend_cam:acc_copyin                                           5400   5400   294      0.0001      0.0000      4204    0.0002      585    
+                    clubb_tend_cam:acc_copyout                                          5400   5400   147      0.0001      0.0000      4654    0.0001      1201   
+                  qneg3                                                                 5400   5400   16758    0.0331      0.0295      5394    0.0387      5390   
+                adv_tracer_src_snk                                                      5400   5400   49       3.1023      1.9781      5393    3.5575      4052   
+                  chemdr                                                                5400   5400   49       2.7646      1.7520      5393    3.1915      4054   
+                    imp_sol                                                             5400   5400   49       0.8458      0.5805      5392    0.9332      4835   
+                      lu_fac                                                            5400   5400   MULTIPLE 0.1829      0.1373      5395    0.2030      2899   
+                      nln_mat                                                           5400   5400   MULTIPLE 0.1546      0.1037      5395    0.1770      3179   
+                      lu_slv                                                            5400   5400   MULTIPLE 0.0969      0.0649      5396    0.1101      2903   
+                      prod_loss                                                         5400   5400   MULTIPLE 0.0781      0.0546      5396    0.0878      2903   
+                      lin_mat                                                           5400   5400   MULTIPLE 0.0114      0.0065      5399    0.0139      835    
+                    modal_gas-aer_exchng                                                5400   5400   49       0.2529      0.1234      5393    0.3303      1763   
+                    modal_coag                                                          5400   5400   49       0.0332      0.0295      5396    0.0405      5311   
+                    modal_nucl                                                          5400   5400   49       0.0246      0.0125      2016    0.0353      3772   
+                  qneg3                                                                 5400   5400   6321     0.0151      0.0136      5399    0.0165      256    
+                microp_aero_run                                                         5400   5400   147      1.4447      0.9746      5397    1.8326      5008   
+                  qneg3                                                                 5400   5400   3381     0.0077      0.0065      5392    0.0089      1059   
+                microp_tend                                                             5400   5400   147      1.3865      0.6037      5393    1.6143      2063   
+                  microp_mg_tend                                                        5400   5400   147      1.2728      0.5551      5393    1.4988      2063   
+                    qneg3                                                               5400   5400   1029     0.0041      0.0034      1825    0.0048      5391   
+                  qneg3                                                                 5400   5400   4116     0.0094      0.0081      5393    0.0106      1698   
+                radiation                                                               5400   5400   49       1.0165      0.8062      2006    1.2570      4293   
+                gw_tend                                                                 5400   5400   49       0.9633      0.7119      5394    1.2560      4081   
+                  qneg3                                                                 5400   5400   6615     0.0149      0.0138      5394    0.0161      3977   
+                aerosol_wet_processes                                                   5400   5400   49       0.6419      0.4480      5395    0.8609      4704   
+                  convect_deep_tend2                                                    5400   5400   49       0.0866      0.0343      5393    0.1802      3078   
+                    convtran2                                                           5400   5400   49       0.0414      0.0102      5394    0.1318      2880   
+                    qneg3                                                               5400   5400   5243     0.0104      0.0094      5398    0.0112      4425   
+                  aero_convproc                                                         5400   5400   49       0.0596      0.0227      5397    0.1684      3168   
+                  qneg3                                                                 5400   5400   2058     0.0046      0.0041      5394    0.0050      1698   
+                aero_drydep                                                             5400   5400   49       0.2322      0.2099      5392    0.2515      4873   
+                  qneg3                                                                 5400   5400   1029     0.0026      0.0022      5392    0.0029      4869   
+                vertical_diffusion_tend                                                 5400   5400   49       0.2159      0.1172      5396    0.2886      2482   
+                  qneg3                                                                 5400   5400   6615     0.0145      0.0131      5395    0.0157      1727   
+                clubb_emissions_tend                                                    5400   5400   49       0.1098      0.0586      5399    0.1356      145    
+                  qneg3                                                                 5400   5400   6566     0.0117      0.0106      5383    0.0133      892    
+                bc_history_write                                                        5400   5400   49       0.0132      0.0070      5393    0.0167      4047   
+                tphysac_init                                                            5400   5400   49       0.0106      0.0069      5395    0.0184      2823   
+                  qneg4                                                                 5400   5400   49       0.0001      0.0000      3929    0.0003      0      
+                bc_cld_diag_history_write                                               5400   5400   49       0.0095      0.0049      5393    0.0138      2195   
+                tropopause                                                              5400   5400   49       0.0089      0.0067      2531    0.0141      2887   
+                carma_timestep_tend                                                     5400   5400   98       0.0029      0.0015      5392    0.0046      4463   
+                rayleigh_friction                                                       5400   5400   49       0.0023      0.0016      5396    0.0029      3489   
+                diag_surf                                                               5400   5400   49       0.0020      0.0010      1057    0.0032      0      
+                iondrag                                                                 5400   5400   49       0.0012      0.0010      5399    0.0014      4416   
+                qneg3                                                                   5400   5400   98       0.0002      0.0002      3658    0.0003      5389   
+              lightning_no_prod                                                         5400   5400   49       0.0743      0.0589      2357    0.1095      3601   
+                shr_reprosum_int                                                        5400   5400   98       0.0734      0.0582      2357    0.1087      3601   
+                  repro_sum_allr_minmax                                                 5400   5400   98       0.0681      0.0529      2357    0.1034      3601   
+                  repro_sum_allr_i8                                                     5400   5400   98       0.0048      0.0046      79      0.0050      5287   
+                  repro_sum_loopb                                                       5400   5400   98       0.0001      0.0000      2451    0.0001      1902   
+                  repro_sum_loopa                                                       5400   5400   98       0.0000      0.0000      5242    0.0001      5017   
+                shr_reprosum_INF_NaN_Chk                                                5400   5400   98       0.0001      0.0001      4345    0.0001      3259   
+              physpkg_st2                                                               5400   5400   49       0.0008      0.0005      5396    0.0015      4175   
+              carma_accumulate_stats                                                    5400   5400   49       0.0000      0.0000      1370    0.0001      3837   
+            stepon_run2                                                                 5400   5400   49       0.7850      0.3246      2957    5.1621      5393   
+              p_d_coupling                                                              5400   5400   49       0.7847      0.3243      2957    5.1619      5393   
+                phys2dyn                                                                5400   5400   49       0.5257      0.1397      4558    4.9042      5393   
+                  fvm:fill_halo_phys                                                    5400   5400   49       0.4418      0.0605      4558    4.8369      5393   
+                p_d_coupling:bndry_exchange                                             5400   5400   49       0.1514      0.0301      2712    0.6528      5397   
+                pd_copy                                                                 5400   5400   49       0.0461      0.0286      5396    0.0740      1825   
+            ionosphere_run2                                                             5400   5400   49       0.0000      0.0000      5397    0.0001      4158   
+          CAM_run3                                                                      5400   5400   49       10.8968     10.3294     4327    11.4452     2282   
+            stepon_run3                                                                 5400   5400   49       10.8966     10.3292     4327    11.4450     2282   
+              dyn_run                                                                   5400   5400   49       10.7822     10.2315     4285    11.3463     2282   
+                prim_advec_tracers_fvm                                                  5400   5400   98       7.6839      6.7249      5357    8.4630      2168   
+                  FVM:tracers_reconstruct                                               5400   5400   9114     2.8112      2.5025      5100    3.4661      4819   
+                    FVM:reconstruction:part#2                                           5400   5400   9114     2.1749      1.9205      5103    2.6669      2871   
+                    FVM:reconstruction:part#1                                           5400   5400   9114     0.4528      0.3854      5397    1.1137      2169   
+                    FVM:reconstruction:part#3                                           5400   5400   9114     0.1604      0.1369      5397    0.2153      324    
+                  fvm:ghost_exchange:Qnhc                                               5400   5400   98       1.1327      0.5991      3600    1.8944      3063   
+                  fvm:orthogonal_swept_areas                                            5400   5400   98       0.8918      0.4031      3710    1.7810      3057   
+                  fvm:fill_halo_fvm:large_Courant                                       5400   5400   98       0.8860      0.4257      1358    1.6194      4848   
+                  fvm:before_Qnhc                                                       5400   5400   98       0.8811      0.4353      5399    0.9283      4877   
+                  fvm:swept_flux                                                        5400   5400   9114     0.8493      0.7963      5378    0.9996      5059   
+                    fvm:swept_area:remap                                                5400   5400   218736   0.2326      0.1977      5393    0.2624      1615   
+                    fvm:swept_area:get_high_order_w                                     5400   5400   218736   0.1691      0.1624      4456    0.1957      954    
+                    fvm:swept_area:get_gamma                                            5400   5400   218736   0.1101      0.0986      3768    0.1427      736    
+                  fvm:large_Courant_number_increment                                    5400   5400   98       0.1610      0.0440      1250    0.2338      1157   
+                  fvm:end_of_reconstruct_subroutine                                     5400   5400   98       0.0589      0.0116      3282    0.0942      4111   
+                prim_advance_exp                                                        5400   5400   294      1.7702      1.2500      4099    2.4798      2467   
+                  compute_and_apply_rhs                                                 5400   5400   1470     1.1709      0.7308      358     1.6927      2492   
+                  advance_hypervis                                                      5400   5400   294      0.5862      0.3739      4083    0.9483      1964   
+                    sponge_diff                                                         5400   5400   294      0.2883      0.1552      4071    0.5146      2603   
+                  prim_adv_prep                                                         5400   5400   294      0.0102      0.0081      5397    0.0113      1238   
+                vertical_remap                                                          5400   5400   98       0.4975      0.4290      1666    0.6374      2763   
+                cslam2gll                                                               5400   5400   98       0.4209      0.2203      1155    0.8854      891    
+                  fvm:fill_halo_cslam2gll                                               5400   5400   98       0.3048      0.1028      1155    0.7703      891    
+                applyCAMforc                                                            5400   5400   98       0.0896      0.0325      5393    0.1444      2583   
+              comp_adv_tends1                                                           5400   5400   49       0.0710      0.0290      5397    0.1034      2580   
+              comp_adv_tends2                                                           5400   5400   49       0.0428      0.0147      813     0.0752      2697   
+          CAM_run4                                                                      5400   5400   49       7.3781      7.3682      4998    7.3931      256    
+            cam_write_restart                                                           5400   5400   1        7.3763      7.3667      5006    7.3899      261    
+              get_decomp                                                                5400   5400   139      0.2903      0.2812      2056    0.3625      769    
+                newdecomp                                                               5400   5400   6        0.2892      0.2801      2056    0.3615      769    
+                get_filemap                                                             5400   5400   6        0.0006      0.0005      5393    0.0020      826    
+            wshist                                                                      5400   5400   49       0.0010      0.0006      2525    0.0020      2171   
+            cam_run4_wrapup                                                             5400   5400   49       0.0002      0.0001      4433    0.0003      1034   
+          CAM_run1                                                                      5400   5400   49       1.4358      1.1343      2173    1.7626      3528   
+            phys_run1                                                                   5400   5400   49       1.1069      0.7880      2178    1.4373      4394   
+              bc_physics                                                                5400   5400   49       0.6251      0.4114      5393    0.6836      3195   
+                moist_convection                                                        5400   5400   49       0.3575      0.2557      5393    0.4264      442    
+                  convect_deep_tend                                                     5400   5400   49       0.3527      0.2526      5393    0.4226      442    
+                    zm_convr_run                                                        5400   5400   49       0.1063      0.0806      1835    0.1348      5378   
+                    convtran1                                                           5400   5400   49       0.0123      0.0087      5175    0.0224      5378   
+                    zm_conv_evap_run                                                    5400   5400   49       0.0068      0.0035      5399    0.0084      446    
+                    zm_conv_momtran_run                                                 5400   5400   49       0.0066      0.0025      5398    0.0101      446    
+                    qneg3                                                               5400   5400   441      0.0010      0.0009      4978    0.0013      5392   
+                bc_init                                                                 5400   5400   49       0.1795      0.1020      5398    0.2327      4313   
+                  qneg3                                                                 5400   5400   49       0.0117      0.0084      5392    0.0225      4313   
+                dry_adjustment                                                          5400   5400   49       0.0709      0.0423      5394    0.0804      1277   
+                  qneg3                                                                 5400   5400   49       0.0002      0.0001      5393    0.0003      2450   
+                energy_fixer                                                            5400   5400   49       0.0130      0.0056      5399    0.0172      2853   
+                cam_export                                                              5400   5400   49       0.0022      0.0013      5399    0.0041      3278   
+                diag_export                                                             5400   5400   49       0.0007      0.0004      5399    0.0011      257    
+                diag_physvar_ic                                                         5400   5400   49       0.0001      0.0001      5394    0.0002      3213   
+              physpkg_st1                                                               5400   5400   49       0.4815      0.2197      1525    0.7948      4318   
+                chk_en_gmean                                                            5400   5400   49       0.3867      0.1245      1525    0.6998      4318   
+                  gmean_arr                                                             5400   5400   49       0.3865      0.1244      1525    0.6996      4318   
+                    gmean_fixed_repro                                                   5400   5400   49       0.3864      0.1243      1525    0.6995      4318   
+                      shr_reprosum_int                                                  5400   5400   49       0.3860      0.1240      1525    0.6990      4318   
+                        repro_sum_allr_minmax                                           5400   5400   49       0.3825      0.1205      1525    0.6956      4318   
+                        repro_sum_allr_i8                                               5400   5400   49       0.0028      0.0025      1132    0.0031      2499   
+                        repro_sum_loopb                                                 5400   5400   49       0.0001      0.0001      2787    0.0002      2132   
+                        repro_sum_loopa                                                 5400   5400   49       0.0001      0.0000      5090    0.0003      563    
+                      shr_reprosum_INF_NaN_Chk                                          5400   5400   49       0.0001      0.0001      5193    0.0003      2734   
+                gmean_arr                                                               5400   5400   245      0.0217      0.0197      0       0.0227      5398   
+                  gmean_fixed_repro                                                     5400   5400   245      0.0216      0.0196      0       0.0226      5398   
+                    shr_reprosum_int                                                    5400   5400   245      0.0213      0.0193      0       0.0223      5398   
+                      repro_sum_allr_minmax                                             5400   5400   245      0.0114      0.0091      0       0.0127      5399   
+                      repro_sum_allr_i8                                                 5400   5400   245      0.0094      0.0091      5376    0.0098      195    
+                      repro_sum_loopb                                                   5400   5400   245      0.0001      0.0001      1502    0.0003      2132   
+                      repro_sum_loopa                                                   5400   5400   245      0.0000      0.0000      3529    0.0001      3084   
+                    shr_reprosum_INF_NaN_Chk                                            5400   5400   245      0.0001      0.0001      714     0.0001      1946   
+                advance_trcdata                                                         5400   5400   4067     0.0184      0.0174      5395    0.0202      1737   
+                  interpolate_trcdata                                                   5400   5400   4067     0.0102      0.0087      5393    0.0114      1006   
+            stepon_run1                                                                 5400   5400   49       0.3286      0.1832      4318    0.6608      4329   
+              d_p_coupling                                                              5400   5400   49       0.3274      0.1817      4318    0.6600      4329   
+                dpcopy                                                                  5400   5400   49       0.0904      0.0338      5074    0.1846      2318   
+                dyn2phys                                                                5400   5400   49       0.0500      0.0247      825     0.0826      2158   
+                derived_phys                                                            5400   5400   49       0.0198      0.0155      5398    0.0266      2307   
+                  qneg3                                                                 5400   5400   49       0.0098      0.0087      5398    0.0120      4451   
+          CAM_import                                                                    5400   5400   48       0.0228      0.0207      5391    0.0250      1295   
+          CAM_export                                                                    5400   5400   48       0.0060      0.0038      5399    0.0112      3782   
+          CAM_adv_timestep                                                              5400   5400   49       0.0001      0.0001      5392    0.0002      2280   
+        [LND] RunPhase1                                                                 5400   5400   48       7.0409      6.9595      5391    7.0980      4882   
+          ctsm_run                                                                      5400   5400   48       7.0093      6.9077      5391    7.0669      152    
+            clm_drv_io                                                                  5400   5400   48       6.8295      6.8273      3608    6.8377      0      
+              clm_drv_io_wrest                                                          5400   5400   1        6.8290      6.8270      3608    6.8370      0      
+              clm_drv_io_htapes                                                         5400   5400   48       0.0004      0.0002      1150    0.0019      4786   
+            bgp_fluxes                                                                  5400   5400   48       0.0400      0.0109      5394    0.0716      1754   
+              canflux                                                                   5400   5400   48       0.0322      0.0061      2485    0.0632      1754   
+                can_iter                                                                5400   5400   48       0.0230      0.0003      2485    0.0524      2487   
+                LUNA                                                                    5400   5400   1        0.0002      0.0000      5278    0.0020      3608   
+              bgflux                                                                    5400   5400   48       0.0033      0.0012      5392    0.0062      3195   
+              uflux                                                                     5400   5400   48       0.0028      0.0003      5377    0.0056      1752   
+              bgplake                                                                   5400   5400   48       0.0016      0.0002      5399    0.0040      2790   
+            hbuf                                                                        5400   5400   48       0.0176      0.0144      5305    0.0226      805    
+            bgc                                                                         5400   5400   48       0.0175      0.0032      5278    0.0293      1081   
+            hydro_without_drainage                                                      5400   5400   48       0.0167      0.0034      5378    0.0316      4012   
+            soiltemperature                                                             5400   5400   48       0.0152      0.0039      5376    0.0298      1806   
+              SoilTempBandDiag                                                          5400   5400   48       0.0038      0.0018      5376    0.0135      45     
+              SoilThermProp                                                             5400   5400   48       0.0019      0.0004      5380    0.0054      4010   
+              PhaseChangebeta                                                           5400   5400   48       0.0015      0.0003      5380    0.0046      1842   
+              PhaseChangeH2osfc                                                         5400   5400   48       0.0003      0.0000      5380    0.0015      1849   
+            depvel                                                                      5400   5400   48       0.0099      0.0023      5306    0.0318      3382   
+            surfalb                                                                     5400   5400   23       0.0086      0.0006      5241    0.0529      4545   
+            dyn_subgrid                                                                 5400   5400   48       0.0075      0.0035      5392    0.0132      1420   
+            surfrad                                                                     5400   5400   48       0.0057      0.0014      5397    0.0106      3411   
+            bgp1                                                                        5400   5400   48       0.0046      0.0012      5394    0.0088      299    
+            begwbal                                                                     5400   5400   96       0.0040      0.0013      5399    0.0079      325    
+            hydro1                                                                      5400   5400   48       0.0035      0.0011      5379    0.0074      5333   
+            lakeTemp                                                                    5400   5400   48       0.0035      0.0003      22      0.0071      5374   
+            drvinit                                                                     5400   5400   48       0.0033      0.0010      3204    0.0064      1868   
+            lnd2atm                                                                     5400   5400   48       0.0029      0.0011      5392    0.0056      4036   
+            balchk                                                                      5400   5400   48       0.0028      0.0009      5378    0.0068      945    
+            accum                                                                       5400   5400   48       0.0023      0.0011      5386    0.0051      938    
+            bgp2                                                                        5400   5400   48       0.0022      0.0005      5392    0.0056      1604   
+              bgp2_loop_1                                                               5400   5400   48       0.0005      0.0000      5392    0.0017      4248   
+              bgp2_loop_2                                                               5400   5400   48       0.0003      0.0001      5264    0.0015      581    
+              bgp2_loop_3                                                               5400   5400   48       0.0003      0.0001      5258    0.0007      383    
+              bgp2_loop_4                                                               5400   5400   48       0.0001      0.0000      5258    0.0002      1857   
+            hdmdyn_strd_adv_total                                                       5400   5400   48       0.0021      0.0019      2433    0.0024      4244   
+              hdmdyn_strd_adv_tint                                                      5400   5400   48       0.0018      0.0016      4481    0.0021      4244   
+              hdmdyn_strd_adv_readLBUB                                                  5400   5400   48       0.0001      0.0001      257     0.0002      519    
+                hdmdyn_readLBUB_setup                                                   5400   5400   48       0.0000      0.0000      1878    0.0001      2675   
+                hdmdyn_readLBUB_filemgt                                                 5400   5400   48       0.0000      0.0000      139     0.0000      612    
+            hylake                                                                      5400   5400   48       0.0021      0.0005      5396    0.0044      2127   
+            hydro2_drainage                                                             5400   5400   48       0.0017      0.0004      5392    0.0042      3367   
+            SatellitePhenology                                                          5400   5400   23       0.0008      0.0000      5393    0.0026      1010   
+            patch2col                                                                   5400   5400   48       0.0006      0.0001      5379    0.0018      752    
+            urbalb                                                                      3824   3824   23       0.0007      0.0001      5255    0.0025      291    
+            decomp_vert                                                                 5400   5400   48       0.0002      0.0001      0       0.0003      4469   
+            snow_init                                                                   5400   5400   48       0.0002      0.0000      5355    0.0009      1884   
+            interpMonthlyVeg                                                            5400   5400   48       0.0001      0.0001      0       0.0002      4025   
+            lnd2glc                                                                     5400   5400   48       0.0001      0.0000      867     0.0001      4720   
+            begcnbal_grc                                                                5400   5400   48       0.0000      0.0000      5393    0.0001      4963   
+            begcnbal_col                                                                5400   5400   48       0.0000      0.0000      1894    0.0000      2598   
+          lc_lnd_export                                                                 5400   5400   48       0.0043      0.0040      5033    0.0050      3981   
+          lc_lnd_import                                                                 5400   5400   48       0.0040      0.0022      5204    0.0065      2079   
+          shr_orb_decl                                                                  5400   5400   48       0.0003      0.0002      526     0.0025      0      
+          lc_ctsm2_adv_timestep                                                         5400   5400   48       0.0001      0.0001      2433    0.0001      673    
+        [ICE] RunPhase1                                                                 5400   5400   48       1.2550      1.2353      3976    1.2881      5399   
+          cice_run_total                                                                5400   5400   48       1.2418      1.2220      3976    1.2745      5399   
+            cice_run_presc                                                              5400   5400   48       0.8805      0.8768      5275    0.8843      2181   
+              cice_pice_strd_adv_total                                                  5400   5400   48       0.8773      0.8763      5297    0.8792      5376   
+                cice_pice_strd_adv_readLBUB                                             5400   5400   48       0.8759      0.8748      5279    0.8777      5376   
+                  cice_pice_readLBUB_fbound                                             5400   5400   1        0.8658      0.8648      1860    0.8676      5376   
+                  cice_pice_readLBUB_LB_readpio                                         5400   5400   1        0.0022      0.0020      3201    0.0023      123    
+                  cice_pice_readLBUB_UB_readpio                                         5400   5400   1        0.0007      0.0006      0       0.0008      4750   
+                  cice_pice_readLBUB_setup                                              5400   5400   48       0.0000      0.0000      4223    0.0001      3280   
+                  cice_pice_readLBUB_filemgt                                            5400   5400   48       0.0000      0.0000      4270    0.0001      0      
+                cice_pice_strd_adv_tint                                                 5400   5400   48       0.0013      0.0012      3510    0.0014      5387   
+            cice_run_export                                                             5400   5400   48       0.0229      0.0199      5399    0.0252      2052   
+            cice_run_import                                                             5400   5400   48       0.0052      0.0026      47      0.0077      3008   
+              cice_imp_ocn                                                              5400   5400   48       0.0003      0.0001      1295    0.0013      788    
+              cice_imp_atm                                                              5400   5400   48       0.0000      0.0000      5284    0.0001      2845   
+        [ROF] RunPhase1                                                                 5400   5400   8        0.8733      0.7988      3917    0.8902      5222   
+          mosartr_tot                                                                   5400   5400   8        0.8709      0.7972      3917    0.8885      5222   
+            mosartr_rest                                                                5400   5400   1        0.7839      0.7804      4096    0.7965      0      
+            mosartr_subcycling                                                          5400   5400   8        0.0784      0.0009      5366    0.1043      545    
+              mosartr_euler                                                             5400   5400   8        0.0782      0.0009      5366    0.1042      545    
+                mosartr_SMeroutUp                                                       5400   5400   120      0.0766      0.0002      5366    0.1026      545    
+                mosartr_chanroute                                                       5400   5400   120      0.0008      0.0002      3205    0.0014      1298   
+                mosartr_subnetwork                                                      5400   5400   120      0.0004      0.0001      3205    0.0011      428    
+                mosartr_hillslope                                                       5400   5400   24       0.0000      0.0000      3205    0.0001      2195   
+            mosartr_SMdirect                                                            5400   5400   8        0.0067      0.0002      688     0.1002      5159   
+            mosartr_budgetset                                                           5400   5400   1        0.0011      0.0000      5151    0.0036      2112   
+            mosartr_budgetcheck                                                         5400   5400   1        0.0005      0.0000      4285    0.0116      3584   
+            mosartr_htapes                                                              5400   5400   8        0.0001      0.0000      3203    0.0009      3399   
+            mosartr_hbuf                                                                5400   5400   8        0.0001      0.0000      688     0.0001      759    
+            mosartr_flood                                                               5400   5400   8        0.0000      0.0000      3578    0.0000      1669   
+            mosartr_irrig                                                               5400   5400   8        0.0000      0.0000      617     0.0000      2189   
+          lc_mosart_import                                                              5400   5400   8        0.0005      0.0001      5152    0.0019      1805   
+          lc_rof_export                                                                 5400   5400   8        0.0002      0.0002      1376    0.0003      3992   
+        [MED] med_phases_restart_write                                                  5400   5400   8        0.4111      0.4105      4463    0.4125      4155   
+          MED:(med_phases_restart_write)                                                5400   5400   8        0.4103      0.4098      4463    0.4115      5005   
+        [MED] med_phases_post_atm                                                       5400   5400   48       0.0627      0.0229      440     0.2804      5393   
+          MED:(med_phases_post_atm)                                                     5400   5400   48       0.0566      0.0172      440     0.2744      5393   
+            MED:(med_phases_post_atm) map_atm2ocn                                       5400   5400   48       0.0228      0.0051      1796    0.2201      5392   
+              MED: (med_map_mod:med_map_field_packed)                                   5400   5400   48       0.0227      0.0050      1796    0.2201      5392   
+                MED: (med_map_mod:med_map_field_packed) map                             5400   5400   48       0.0175      0.0006      1796    0.2154      5392   
+                MED: (med_map_mod:med_map_field_packed) copy from src                   5400   5400   48       0.0007      0.0004      3005    0.0012      3782   
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    5400   5400   48       0.0004      0.0003      1499    0.0008      2839   
+            MED:(med_phases_post_atm) map_atm2lnd                                       5400   5400   48       0.0224      0.0050      347     0.0661      1799   
+              MED: (med_map_mod:med_map_field_packed)                                   5400   5400   48       0.0224      0.0050      347     0.0660      1799   
+                MED: (med_map_mod:med_map_field_packed) map                             5400   5400   48       0.0187      0.0012      442     0.0621      1799   
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    5400   5400   48       0.0007      0.0006      560     0.0010      4869   
+                MED: (med_map_mod:med_map_field_packed) copy from src                   5400   5400   48       0.0005      0.0004      5392    0.0007      2837   
+            MED:(med_phases_post_atm) map_atm2ice                                       5400   5400   48       0.0106      0.0042      3600    0.0478      548    
+              MED: (med_map_mod:med_map_field_packed)                                   5400   5400   48       0.0105      0.0042      3600    0.0477      548    
+                MED: (med_map_mod:med_map_field_packed) map                             5400   5400   48       0.0066      0.0003      3600    0.0438      548    
+                MED: (med_map_mod:med_map_field_packed) copy from src                   5400   5400   48       0.0007      0.0006      5396    0.0012      2839   
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    5400   5400   48       0.0007      0.0005      5392    0.0010      4800   
+            MED:(med_phases_history_write_comp_aux)                                     5400   5400   48       0.0001      0.0001      88      0.0002      2813   
+            MED:(med_phases_history_write_inst_comp)                                    5400   5400   48       0.0001      0.0001      3714    0.0002      4802   
+            MED:(med_phases_history_write_comp_avg)                                     5400   5400   48       0.0000      0.0000      1937    0.0001      310    
+        [MED] med_phases_prep_atm                                                       5400   5400   48       0.0613      0.0537      3600    0.0823      3636   
+          MED:(med_phases_prep_atm)                                                     5400   5400   48       0.0570      0.0496      3600    0.0779      3636   
+            MED: (med_map_mod:med_map_field_packed)                                     5400   5400   192      0.0185      0.0116      3600    0.0395      3636   
+              MED: (med_map_mod:med_map_field_packed) map                               5400   5400   192      0.0072      0.0008      3600    0.0284      3636   
+              MED: (med_map_mod:med_map_field_packed) copy from src                     5400   5400   192      0.0013      0.0012      352     0.0015      1688   
+              MED: (med_map_mod:med_map_field_packed) copy to dest                      5400   5400   192      0.0012      0.0010      3600    0.0013      3779   
+            MED: (module_med_merge_mod: med_merge_auto)                                 5400   5400   48       0.0090      0.0087      3568    0.0099      892    
+        [MED] med_phases_prep_rof                                                       5400   5400   8        0.0600      0.0567      2290    0.0645      4659   
+          MED:(med_phases_prep_rof_mod: med_phases_prep_rof)                            5400   5400   8        0.0591      0.0558      43      0.0636      4659   
+            MED:(med_phases_prep_rof_mod: med_phases_prep_rof_irrig)                    5400   5400   8        0.0375      0.0352      4936    0.0397      1729   
+            MED: (med_map_mod:med_map_field_packed)                                     5400   5400   8        0.0186      0.0147      2149    0.0244      4659   
+              MED: (med_map_mod:med_map_field_packed) map                               5400   5400   8        0.0181      0.0142      2149    0.0240      4659   
+              MED: (med_map_mod:med_map_field_packed) copy to dest                      5400   5400   8        0.0000      0.0000      364     0.0001      4939   
+              MED: (med_map_mod:med_map_field_packed) copy from src                     5400   5400   8        0.0000      0.0000      2187    0.0001      965    
+            MED: (module_med_merge_mod: med_merge_auto)                                 5400   5400   8        0.0011      0.0002      181     0.0046      2096   
+        [MED] med_phases_aofluxes_run                                                   5400   5400   48       0.0473      0.0320      5272    0.1100      5384   
+          MED:(med_aofluxes_init)                                                       5400   5400   1        0.0410      0.0267      5284    0.1049      5376   
+          MED: (med_phases_aofluxes_run)                                                5400   5400   48       0.0022      0.0002      4825    0.0036      2283   
+            MED:(med_aofluxes_update)                                                   5400   5400   48       0.0010      0.0001      620     0.0028      3043   
+        [LND-TO-MED] RunPhase1                                                          5400   5400   48       0.0464      0.0088      0       0.0636      4944   
+        [MED] med_phases_post_rof                                                       5400   5400   8        0.0433      0.0261      513     0.1186      4281   
+          MED:(med_phases_post_rof)                                                     5400   5400   8        0.0426      0.0253      513     0.1178      4281   
+            MED:(med_phases_post_rof_mod: med_phases_post_rof_remove_negative_runoff)   5400   5400   16       0.0335      0.0182      897     0.1084      5366   
+            MED:(med_phases_post_rof) map_rof2lnd                                       5400   5400   8        0.0086      0.0054      441     0.0110      5153   
+              MED: (med_map_mod:med_map_field_packed)                                   5400   5400   8        0.0086      0.0054      441     0.0110      5153   
+                MED: (med_map_mod:med_map_field_packed) map                             5400   5400   8        0.0081      0.0049      441     0.0104      5153   
+                MED: (med_map_mod:med_map_field_packed) copy from src                   5400   5400   8        0.0000      0.0000      3047    0.0001      2730   
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    5400   5400   8        0.0000      0.0000      4323    0.0000      3874   
+            MED:(med_phases_history_write_comp_aux)                                     5400   5400   8        0.0001      0.0001      933     0.0002      5316   
+            MED:(med_phases_post_rof) map_rof2ice                                       5400   5400   8        0.0001      0.0001      577     0.0001      5140   
+              MED: (med_map_mod:med_map_field_packed)                                   5400   5400   8        0.0001      0.0000      577     0.0001      5140   
+            MED:(med_phases_history_write_inst_comp)                                    5400   5400   8        0.0000      0.0000      1210    0.0001      4959   
+            MED:(med_phases_history_write_comp_avg)                                     5400   5400   8        0.0000      0.0000      3587    0.0000      3009   
+        [MED-TO-LND] RunPhase1                                                          5400   5400   48       0.0418      0.0089      5399    0.0608      76     
+        [MED] med_phases_prep_lnd                                                       5400   5400   48       0.0388      0.0325      5394    0.0418      2051   
+          MED:(med_phases_prep_lnd)                                                     5400   5400   48       0.0338      0.0279      5394    0.0365      2051   
+            MED:(med_phases_prep_lnd) merge                                             5400   5400   48       0.0055      0.0051      5026    0.0061      5376   
+              MED: (module_med_merge_mod: med_merge_auto)                               5400   5400   48       0.0054      0.0051      5026    0.0060      5376   
+        [MED] med_phases_ocnalb_run                                                     5400   5400   48       0.0347      0.0057      0       0.0931      5258   
+          MED:(med_phases_ocnalb_run)                                                   5400   5400   48       0.0308      0.0018      0       0.0892      5258   
+        [MED] med_phases_prep_ice                                                       5400   5400   48       0.0325      0.0280      5395    0.0360      2084   
+          MED:(med_phases_prep_ice)                                                     5400   5400   48       0.0272      0.0232      5394    0.0304      2084   
+            MED: (module_med_merge_mod: med_merge_auto)                                 5400   5400   48       0.0052      0.0048      5392    0.0057      1698   
+        [OCN] RunPhase1                                                                 5400   5400   48       0.0314      0.0239      0       0.0329      1370   
+          DOCN_RUN                                                                      5400   5400   48       0.0251      0.0177      0       0.0260      1370   
+            docn_strdata_advance                                                        5400   5400   48       0.0010      0.0009      4481    0.0011      1887   
+              docn_strd_adv_total                                                       5400   5400   48       0.0010      0.0008      4481    0.0011      1887   
+                docn_strd_adv_tint                                                      5400   5400   48       0.0007      0.0006      4481    0.0008      5201   
+                docn_strd_adv_readLBUB                                                  5400   5400   48       0.0001      0.0001      2400    0.0002      3917   
+                  docn_readLBUB_setup                                                   5400   5400   48       0.0000      0.0000      3986    0.0001      2717   
+                  docn_readLBUB_filemgt                                                 5400   5400   48       0.0000      0.0000      39      0.0000      2423   
+            docn_dfield_copy                                                            5400   5400   48       0.0002      0.0002      3008    0.0003      4474   
+        [MED] med_phases_post_lnd                                                       5400   5400   48       0.0250      0.0116      4353    0.0783      0      
+          MED:(med_phases_post_lnd)                                                     5400   5400   48       0.0203      0.0071      4353    0.0738      0      
+            MED: (med_map_mod:med_map_field_packed)                                     5400   5400   48       0.0185      0.0060      4353    0.0724      0      
+              MED: (med_map_mod:med_map_field_packed) map                               5400   5400   48       0.0139      0.0015      4349    0.0681      0      
+              MED: (med_map_mod:med_map_field_packed) copy from src                     5400   5400   48       0.0009      0.0008      4512    0.0011      5372   
+              MED: (med_map_mod:med_map_field_packed) copy to dest                      5400   5400   48       0.0008      0.0006      54      0.0010      896    
+            MED:(med_phases_prep_rof_mod: med_phases_prep_rof_accum)                    5400   5400   48       0.0014      0.0006      3954    0.0022      3068   
+            MED:(med_phases_history_write_comp_aux)                                     5400   5400   48       0.0001      0.0001      3643    0.0002      1696   
+            MED:(med_phases_history_write_inst_comp)                                    5400   5400   48       0.0000      0.0000      2880    0.0001      4059   
+            MED:(med_phases_history_write_comp_avg)                                     5400   5400   48       0.0000      0.0000      2002    0.0001      4052   
+        [MED] med_phases_post_ice                                                       5400   5400   48       0.0160      0.0061      3600    0.0385      4354   
+          MED:(med_phases_post_ice)                                                     5400   5400   48       0.0117      0.0019      3600    0.0342      4354   
+            MED: (med_fraction_set)                                                     5400   5400   48       0.0113      0.0015      3601    0.0338      4354   
+              MED: (med_fraction_set) fbfrac(compatm)                                   5400   5400   48       0.0102      0.0005      3601    0.0328      4354   
+              MED: (med_fraction_set) fbfrac(compocn)                                   5400   5400   48       0.0006      0.0005      98      0.0008      5378   
+            MED:(med_phases_history_write_comp_aux)                                     5400   5400   48       0.0001      0.0001      654     0.0001      5161   
+            MED:(med_phases_history_write_inst_comp)                                    5400   5400   48       0.0000      0.0000      251     0.0001      153    
+            MED:(med_phases_history_write_comp_avg)                                     5400   5400   48       0.0000      0.0000      970     0.0001      1623   
+        [ATM-TO-MED] RunPhase1                                                          5400   5400   48       0.0157      0.0114      78      0.0282      3782   
+        [ICE-TO-MED] RunPhase1                                                          5400   5400   48       0.0091      0.0085      4353    0.0096      572    
+        [MED-TO-ATM] RunPhase1                                                          5400   5400   48       0.0090      0.0085      3700    0.0097      1834   
+        [MED] med_phases_post_ocn                                                       5400   5400   48       0.0088      0.0080      3960    0.0106      3134   
+          MED:(med_phases_post_ocn)                                                     5400   5400   48       0.0043      0.0036      2401    0.0061      3134   
+            MED:(med_phases_post_ocn) map_ocn2ice                                       5400   5400   48       0.0034      0.0031      2401    0.0038      1655   
+              MED: (med_map_mod:med_map_field_packed)                                   5400   5400   48       0.0033      0.0031      2492    0.0037      1655   
+                MED: (med_map_mod:med_map_field_packed) map                             5400   5400   48       0.0005      0.0004      4832    0.0007      4280   
+                MED: (med_map_mod:med_map_field_packed) copy from src                   5400   5400   48       0.0003      0.0003      4353    0.0004      907    
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    5400   5400   48       0.0002      0.0002      2492    0.0003      567    
+            MED:(med_phases_history_write_comp_aux)                                     5400   5400   48       0.0002      0.0001      706     0.0008      2792   
+            MED:(med_phases_history_write_inst_comp)                                    5400   5400   48       0.0001      0.0001      3230    0.0011      1186   
+            MED:(med_phases_history_write_comp_avg)                                     5400   5400   48       0.0000      0.0000      177     0.0001      2014   
+        [MED-TO-ICE] RunPhase1                                                          5400   5400   48       0.0082      0.0074      5394    0.0088      2178   
+        [OCN-TO-MED] RunPhase1                                                          5400   5400   48       0.0051      0.0047      1519    0.0057      4276   
+        [MED] med_phases_history_write                                                  5400   5400   8        0.0014      0.0007      4831    0.0026      5338   
+          MED:(med_phases_history_write)                                                5400   5400   8        0.0000      0.0000      3016    0.0001      4281   
+        [MED-TO-ROF] RunPhase1                                                          5400   5400   8        0.0009      0.0008      362     0.0017      4459   
+        [ROF-TO-MED] RunPhase1                                                          5400   5400   8        0.0009      0.0008      2124    0.0013      3409   
+        [MED] med_phases_profile                                                        5400   5400   8        0.0007      0.0007      617     0.0010      5121   
+          MED:(med_phases_profile)                                                      5400   5400   8        0.0001      0.0001      3682    0.0002      0      
+    [ensemble] FinalizePhase1                                                           5504   5504   1        0.0133      0.0008      5410    0.0163      140    
+      [ESM0001] FinalizePhase1                                                          5504   5504   1        0.0125      0.0004      5410    0.0158      140    
+        [ATM] FinalizePhase1                                                            5400   5400   1        0.0019      0.0002      3136    0.0025      470    
+        [MED-TO-ATM] FinalizePhase1                                                     5400   5400   1        0.0002      0.0001      1475    0.0014      3808   
+        [MED-TO-LND] FinalizePhase1                                                     5400   5400   1        0.0001      0.0001      1433    0.0002      3841   
+        [ICE-TO-MED] FinalizePhase1                                                     5400   5400   1        0.0001      0.0001      776     0.0002      3281   
+        [MED-TO-ICE] FinalizePhase1                                                     5400   5400   1        0.0001      0.0001      1436    0.0002      5376   
+        [LND-TO-MED] FinalizePhase1                                                     5400   5400   1        0.0001      0.0001      1451    0.0002      4224   
+        [ATM-TO-MED] FinalizePhase1                                                     5400   5400   1        0.0001      0.0001      2709    0.0002      3852   
+        [MED-TO-ROF] FinalizePhase1                                                     5400   5400   1        0.0001      0.0001      2720    0.0001      4324   
+        [OCN-TO-MED] FinalizePhase1                                                     5400   5400   1        0.0001      0.0001      1454    0.0002      2805   
+        [ROF-TO-MED] FinalizePhase1                                                     5400   5400   1        0.0001      0.0001      3766    0.0002      2805   
+        [MED] FinalizePhase1                                                            5400   5400   1        0.0001      0.0000      4662    0.0005      55     
+        [LND] FinalizePhase1                                                            5400   5400   1        0.0001      0.0001      4633    0.0001      2688   
+        [ICE] FinalizePhase1                                                            5400   5400   1        0.0000      0.0000      3763    0.0001      0      
+        [OCN] FinalizePhase1                                                            5400   5400   1        0.0000      0.0000      3073    0.0001      1408   
+        [ROF] FinalizePhase1                                                            5400   5400   1        0.0000      0.0000      3088    0.0001      2688   

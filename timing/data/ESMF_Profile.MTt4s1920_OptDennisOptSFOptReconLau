@@ -1,0 +1,689 @@
+Region                                                                                  PETs   PEs    Count    Mean (s)    Min (s)     Min PET Max (s)     Max PET
+  [ESMF]                                                                                1920   1920   1        221.4811    221.4778    567     221.4835    336    
+    [ensemble] Init 1                                                                   1920   1920   1        130.5099    130.4601    1152    130.5163    340    
+      [ESM0001] IPDv02p3                                                                1920   1920   1        111.9365    111.9353    967     111.9395    357    
+        [ATM] IPDv03p3                                                                  1920   1920   1        95.1146     95.1105     1069    95.1197     1751   
+          get_decomp                                                                    1920   1920   157      0.0537      0.0367      1904    0.0674      1      
+            newdecomp                                                                   1920   1920   5        0.0526      0.0353      1904    0.0661      1025   
+            get_filemap                                                                 1920   1920   5        0.0001      0.0001      1796    0.0003      1569   
+          shr_reprosum_int                                                              1920   1920   6        0.0206      0.0099      721     0.0477      1701   
+            repro_sum_allr_minmax                                                       1920   1920   6        0.0169      0.0061      721     0.0440      1701   
+            repro_sum_allr_i8                                                           1920   1920   6        0.0022      0.0003      967     0.0034      1685   
+            repro_sum_loopb                                                             1920   1920   6        0.0005      0.0000      1823    0.0023      967    
+            repro_sum_loopa                                                             1920   1920   6        0.0001      0.0000      1660    0.0005      52     
+          gmean_arr                                                                     1920   1920   5        0.0034      0.0013      40      0.0051      262    
+            gmean_fixed_repro                                                           1920   1920   5        0.0034      0.0013      40      0.0051      262    
+              shr_reprosum_int                                                          1920   1920   5        0.0034      0.0013      40      0.0051      262    
+                repro_sum_allr_minmax                                                   1920   1920   5        0.0032      0.0011      40      0.0049      262    
+                repro_sum_allr_i8                                                       1920   1920   5        0.0002      0.0001      647     0.0002      1026   
+                repro_sum_loopb                                                         1920   1920   5        0.0000      0.0000      1764    0.0000      192    
+                repro_sum_loopa                                                         1920   1920   5        0.0000      0.0000      1809    0.0000      747    
+              shr_reprosum_INF_NaN_Chk                                                  1920   1920   5        0.0000      0.0000      1815    0.0000      1251   
+          phys_grid_init                                                                1920   1920   1        0.0033      0.0000      642     0.0073      1046   
+          parallelMin                                                                   1920   1920   1        0.0020      0.0000      824     0.0032      1583   
+          shr_reprosum_INF_NaN_Chk                                                      1920   1920   6        0.0003      0.0000      1430    0.0011      432    
+        [LND] IPDv01p3                                                                  1920   1920   1        12.8469     12.8429     920     12.8501     508    
+          clm_init2                                                                     1920   1920   1        11.9775     11.9712     1694    11.9822     382    
+            init_dyn_subgrid                                                            1920   1920   1        2.3826      2.3734      629     2.3857      66     
+            readMonthlyVeg                                                              1920   1920   1        0.5482      0.5477      340     0.5493      1163   
+            hdmdyn_strd_adv_total                                                       1920   1920   1        0.4012      0.3980      721     0.4039      1603   
+              hdmdyn_strd_adv_readLBUB                                                  1920   1920   1        0.4003      0.3976      669     0.4027      1489   
+                hdmdyn_readLBUB_fbound                                                  1920   1920   1        0.3758      0.3732      653     0.3781      184    
+                hdmdyn_readLBUB_LB_readpio                                              1920   1920   1        0.0107      0.0097      795     0.0119      355    
+                hdmdyn_readLBUB_UB_readpio                                              1920   1920   1        0.0052      0.0051      0       0.0052      1885   
+                hdmdyn_readLBUB_setup                                                   1920   1920   1        0.0000      0.0000      1228    0.0000      188    
+                hdmdyn_readLBUB_filemgt                                                 1920   1920   1        0.0000      0.0000      1908    0.0001      0      
+              hdmdyn_strd_adv_tint                                                      1920   1920   1        0.0006      0.0000      556     0.0025      919    
+            prigentrghn_strd_adv_total                                                  1920   1920   1        0.0699      0.0691      0       0.0703      1919   
+              prigentrghn_strd_adv_readLBUB                                             1920   1920   1        0.0698      0.0691      0       0.0703      1919   
+                prigentrghn_readLBUB_LB_readpio                                         1920   1920   1        0.0485      0.0472      257     0.0496      112    
+                prigentrghn_readLBUB_fbound                                             1920   1920   1        0.0113      0.0105      0       0.0117      1919   
+                prigentrghn_readLBUB_UB_readpio                                         1920   1920   1        0.0022      0.0021      464     0.0024      1663   
+                prigentrghn_readLBUB_setup                                              1920   1920   1        0.0000      0.0000      201     0.0000      476    
+                prigentrghn_readLBUB_filemgt                                            1920   1920   1        0.0000      0.0000      90      0.0001      0      
+              prigentrghn_strd_adv_tint                                                 1920   1920   1        0.0000      0.0000      1520    0.0000      1585   
+            clm_decompInit_clumps                                                       1920   1920   1        0.0132      0.0132      1415    0.0132      22     
+            clm_decompInit_glcp                                                         1920   1920   1        0.0065      0.0035      178     0.0116      981    
+            init_map2gc                                                                 1920   1920   1        0.0032      0.0003      1470    0.0058      309    
+            init_accflds                                                                1920   1920   1        0.0022      0.0001      1729    0.0059      633    
+            init_orbd                                                                   1920   1920   1        0.0008      0.0000      525     0.0028      1725   
+            init_lnd2glc                                                                1920   1920   1        0.0000      0.0000      1616    0.0000      54     
+            init_wlog                                                                   1920   1920   1        0.0000      0.0000      1756    0.0000      0      
+          clm_init1                                                                     1920   1920   1        0.5093      0.5074      674     0.5118      785    
+          lc_lnd_set_decomp_and_domain_from_readmesh                                    1920   1920   1        0.3345      0.3340      962     0.3376      607    
+        [OCN] IPDv01p3                                                                  1920   1920   1        0.9620      0.9589      646     0.9666      837    
+          DOCN_RUN                                                                      1920   1920   1        0.5979      0.5960      662     0.5998      373    
+            docn_strdata_advance                                                        1920   1920   1        0.5968      0.5957      670     0.5983      91     
+              docn_strd_adv_total                                                       1920   1920   1        0.5968      0.5957      670     0.5983      91     
+                docn_strd_adv_readLBUB                                                  1920   1920   1        0.5967      0.5957      670     0.5983      91     
+                  docn_readLBUB_fbound                                                  1920   1920   1        0.5847      0.5837      670     0.5862      265    
+                  docn_readLBUB_LB_readpio                                              1920   1920   1        0.0038      0.0029      641     0.0044      380    
+                  docn_readLBUB_UB_readpio                                              1920   1920   1        0.0011      0.0005      272     0.0013      684    
+                  docn_readLBUB_setup                                                   1920   1920   1        0.0000      0.0000      204     0.0000      907    
+                  docn_readLBUB_filemgt                                                 1920   1920   1        0.0000      0.0000      1687    0.0001      0      
+                docn_strd_adv_tint                                                      1920   1920   1        0.0000      0.0000      1488    0.0000      1272   
+            docn_dfield_copy                                                            1920   1920   1        0.0010      0.0000      1085    0.0017      373    
+          docn_strdata_init                                                             1920   1920   1        0.3600      0.3580      724     0.3636      985    
+        [ROF] IPDv01p3                                                                  1920   1920   1        0.7196      0.7135      357     0.7236      1438   
+          mosarti_mosart_init                                                           1920   1920   1        0.3368      0.3309      1641    0.3407      903    
+            mosarti_histinit                                                            1920   1920   1        0.0043      0.0009      165     0.0071      861    
+            mosarti_restart                                                             1920   1920   1        0.0004      0.0000      134     0.0015      1687   
+            mosarti_budgetinit                                                          1920   1920   1        0.0001      0.0000      1043    0.0006      1046   
+          mosarti_decomp                                                                1920   1920   1        0.0359      0.0348      1511    0.0370      0      
+        [ICE] IPDv01p3                                                                  1920   1920   1        0.3515      0.3451      381     0.3571      754    
+          cice_init2                                                                    1920   1920   1        0.0675      0.0577      1156    0.0745      1333   
+        [MED] IPDv03p4                                                                  1920   1920   1        0.1652      0.1644      1235    0.1659      1374   
+        [LND-TO-MED] IPDv05p6b                                                          1920   1920   1        0.1243      0.1243      132     0.1243      1013   
+        [ICE-TO-MED] IPDv05p6b                                                          1920   1920   1        0.1104      0.1104      1827    0.1105      779    
+        [MED-TO-ATM] IPDv05p6b                                                          1920   1920   1        0.1053      0.1050      1045    0.1067      1372   
+        [ROF-TO-MED] IPDv05p5                                                           1920   1920   1        0.1001      0.0986      314     0.1022      250    
+        [MED-TO-LND] IPDv05p6b                                                          1920   1920   1        0.0996      0.0983      1372    0.0999      786    
+        [MED-TO-ROF] IPDv05p5                                                           1920   1920   1        0.0922      0.0879      348     0.0934      487    
+        [ROF-TO-MED] IPDv05p6b                                                          1920   1920   1        0.0781      0.0781      1668    0.0781      393    
+        [MED-TO-ICE] IPDv05p6b                                                          1920   1920   1        0.0772      0.0772      133     0.0772      1111   
+        [LND-TO-MED] IPDv05p5                                                           1920   1920   1        0.0756      0.0721      402     0.0808      575    
+        [ICE-TO-MED] IPDv05p5                                                           1920   1920   1        0.0735      0.0673      1254    0.0775      403    
+        [MED-TO-ROF] IPDv05p6b                                                          1920   1920   1        0.0705      0.0704      387     0.0705      114    
+        [MED-TO-LND] IPDv05p5                                                           1920   1920   1        0.0700      0.0508      865     0.0768      66     
+        [LND-TO-MED] IPDv05p4                                                           1920   1920   1        0.0691      0.0657      1027    0.0744      1034   
+        [ICE-TO-MED] IPDv05p4                                                           1920   1920   1        0.0680      0.0663      930     0.0696      1645   
+        [ATM-TO-MED] IPDv05p6b                                                          1920   1920   1        0.0637      0.0636      164     0.0637      424    
+        [MED-TO-ATM] IPDv05p5                                                           1920   1920   1        0.0574      0.0557      1150    0.0763      865    
+        [MED-TO-ATM] IPDv05p4                                                           1920   1920   1        0.0536      0.0520      467     0.0584      1034   
+        [MED-TO-LND] IPDv05p4                                                           1920   1920   1        0.0524      0.0503      1318    0.0538      1791   
+        [OCN-TO-MED] IPDv05p6b                                                          1920   1920   1        0.0503      0.0502      780     0.0503      1647   
+        [MED-TO-ICE] IPDv05p5                                                           1920   1920   1        0.0499      0.0445      66      0.0547      348    
+        [MED-TO-ICE] IPDv05p4                                                           1920   1920   1        0.0429      0.0413      1082    0.0447      1589   
+        [ATM-TO-MED] IPDv05p5                                                           1920   1920   1        0.0279      0.0268      1755    0.0313      1488   
+        [MED] IPDv03p5                                                                  1920   1920   1        0.0261      0.0222      257     0.0308      613    
+        [OCN-TO-MED] IPDv05p5                                                           1920   1920   1        0.0254      0.0198      1034    0.0275      639    
+        [ATM-TO-MED] IPDv05p4                                                           1920   1920   1        0.0246      0.0233      1386    0.0276      1027   
+        [OCN-TO-MED] IPDv05p4                                                           1920   1920   1        0.0205      0.0149      1034    0.0222      728    
+        [ROF-TO-MED] IPDv05p4                                                           1920   1920   1        0.0178      0.0168      1345    0.0189      1210   
+        [MED-TO-ROF] IPDv05p4                                                           1920   1920   1        0.0162      0.0131      1034    0.0175      1511   
+        [MED] IPDv03p3                                                                  1920   1920   1        0.0072      0.0055      1792    0.0091      1445   
+        [MED-TO-ATM] IPDv05p6a                                                          1920   1920   1        0.0036      0.0003      608     0.0052      1149   
+        [MED-TO-LND] IPDv05p6a                                                          1920   1920   1        0.0014      0.0003      1149    0.0018      1193   
+        [LND] IPDv01p4                                                                  1920   1920   1        0.0011      0.0004      146     0.0038      371    
+        [ESM0001] IPDv05p4                                                              1920   1920   1        0.0007      0.0001      958     0.0112      3      
+        [MED] IPDv03p6                                                                  1920   1920   1        0.0006      0.0005      1617    0.0008      769    
+        [ICE-TO-MED] IPDv05p6a                                                          1920   1920   1        0.0003      0.0003      659     0.0003      578    
+        [MED-TO-ICE] IPDv05p6a                                                          1920   1920   1        0.0003      0.0002      297     0.0003      646    
+        [ATM-TO-MED] IPDv05p6a                                                          1920   1920   1        0.0003      0.0002      60      0.0003      744    
+        [LND-TO-MED] IPDv05p6a                                                          1920   1920   1        0.0002      0.0002      658     0.0003      781    
+        [ATM] IPDv03p6                                                                  1920   1920   1        0.0002      0.0002      1858    0.0003      1198   
+        [MED-TO-ROF] IPDv05p6a                                                          1920   1920   1        0.0002      0.0002      658     0.0002      17     
+        [ICE] IPDv01p4                                                                  1920   1920   1        0.0002      0.0002      1397    0.0003      1412   
+        [OCN-TO-MED] IPDv05p6a                                                          1920   1920   1        0.0002      0.0002      246     0.0002      1890   
+        [ROF-TO-MED] IPDv05p6a                                                          1920   1920   1        0.0002      0.0002      1499    0.0002      1809   
+        [ROF] IPDv01p4                                                                  1920   1920   1        0.0001      0.0001      1150    0.0001      176    
+        [OCN] IPDv01p4                                                                  1920   1920   1        0.0001      0.0000      353     0.0001      0      
+        [ESM0001] IPDv05p6                                                              1920   1920   1        0.0001      0.0000      99      0.0001      248    
+      [ESM0001] IPDv02p5                                                                1920   1920   1        16.2637     16.2625     814     16.2652     315    
+        [ATM] IPDv03p7                                                                  1920   1920   2        12.6505     12.5906     860     12.7044     1174   
+          phys_run1                                                                     1920   1920   1        12.1456     11.8727     162     12.5915     405    
+            physpkg_st1                                                                 1920   1920   1        11.9580     11.7006     180     12.4259     418    
+              advance_trcdata                                                           1920   1920   83       11.6941     11.6918     1554    11.6964     942    
+                read_next_trcdata                                                       1920   1920   83       11.6908     11.6876     1057    11.6942     395    
+                  get_decomp                                                            1920   1920   204      0.0221      0.0161      1689    0.0316      1      
+                    newdecomp                                                           1920   1920   3        0.0214      0.0154      1744    0.0295      129    
+                    get_filemap                                                         1920   1920   3        0.0000      0.0000      621     0.0001      1      
+                interpolate_trcdata                                                     1920   1920   83       0.0026      0.0006      1569    0.0046      759    
+              chk_en_gmean                                                              1920   1920   1        0.2563      0.0002      180     0.7221      390    
+                gmean_arr                                                               1920   1920   1        0.2563      0.0001      180     0.7220      390    
+                  gmean_fixed_repro                                                     1920   1920   1        0.2563      0.0001      180     0.7220      390    
+                    shr_reprosum_int                                                    1920   1920   1        0.2563      0.0001      180     0.7220      390    
+                      repro_sum_allr_minmax                                             1920   1920   1        0.2562      0.0001      180     0.7219      390    
+                      repro_sum_allr_i8                                                 1920   1920   1        0.0001      0.0000      518     0.0001      1553   
+                      repro_sum_loopb                                                   1920   1920   1        0.0000      0.0000      1600    0.0000      617    
+                      repro_sum_loopa                                                   1920   1920   1        0.0000      0.0000      1680    0.0000      1460   
+                    shr_reprosum_INF_NaN_Chk                                            1920   1920   1        0.0000      0.0000      1866    0.0000      1523   
+              gmean_arr                                                                 1920   1920   5        0.0020      0.0004      563     0.0036      786    
+                gmean_fixed_repro                                                       1920   1920   5        0.0020      0.0004      563     0.0036      786    
+                  shr_reprosum_int                                                      1920   1920   5        0.0020      0.0004      563     0.0036      786    
+                    repro_sum_allr_minmax                                               1920   1920   5        0.0018      0.0002      563     0.0034      1585   
+                    repro_sum_allr_i8                                                   1920   1920   5        0.0002      0.0002      724     0.0002      1111   
+                    repro_sum_loopb                                                     1920   1920   5        0.0000      0.0000      1843    0.0000      303    
+                    repro_sum_loopa                                                     1920   1920   5        0.0000      0.0000      1918    0.0000      907    
+                  shr_reprosum_INF_NaN_Chk                                              1920   1920   5        0.0000      0.0000      1593    0.0000      1339   
+            bc_physics                                                                  1920   1920   1        0.1876      0.1296      860     0.2448      1174   
+              moist_convection                                                          1920   1920   2        0.0193      0.0140      340     0.0253      542    
+                convect_deep_tend                                                       1920   1920   2        0.0189      0.0136      340     0.0248      542    
+                  zm_convr_run                                                          1920   1920   2        0.0079      0.0045      1819    0.0119      1113   
+                  convtran1                                                             1920   1920   2        0.0009      0.0004      333     0.0020      1628   
+                  zm_conv_momtran_run                                                   1920   1920   2        0.0009      0.0003      280     0.0024      520    
+                  zm_conv_evap_run                                                      1920   1920   2        0.0008      0.0003      761     0.0024      611    
+                  qneg3                                                                 1920   1920   18       0.0000      0.0000      1876    0.0001      1295   
+              energy_fixer                                                              1920   1920   2        0.0034      0.0003      65      0.0070      1291   
+              dry_adjustment                                                            1920   1920   2        0.0026      0.0008      1503    0.0050      1804   
+                qneg3                                                                   1920   1920   2        0.0002      0.0000      1220    0.0010      1440   
+              bc_init                                                                   1920   1920   2        0.0025      0.0008      870     0.0049      394    
+                qneg3                                                                   1920   1920   2        0.0008      0.0004      1914    0.0020      388    
+              diag_physvar_ic                                                           1920   1920   2        0.0002      0.0000      69      0.0014      707    
+              cam_export                                                                1920   1920   2        0.0001      0.0000      1899    0.0011      1906   
+              diag_export                                                               1920   1920   2        0.0000      0.0000      974     0.0001      776    
+          stepon_run1                                                                   1920   1920   1        0.5020      0.0353      417     0.7601      162    
+            d_p_coupling                                                                1920   1920   1        0.5015      0.0347      418     0.7594      180    
+              derived_phys                                                              1920   1920   1        0.4781      0.0148      405     0.7379      180    
+                qneg3                                                                   1920   1920   2        0.0006      0.0004      1910    0.0009      6      
+              dpcopy                                                                    1920   1920   1        0.0083      0.0020      1782    0.0129      70     
+              dyn2phys                                                                  1920   1920   1        0.0066      0.0014      1899    0.0091      1197   
+        [MED] IPDv03p7                                                                  1920   1920   3        3.5370      3.5325      385     3.5401      1260   
+          MED: (med_map_mod: RouteHandles_init)                                         1920   1920   1        2.6485      2.6439      546     2.6519      769    
+          MED: (med_fraction_init)                                                      1920   1920   2        0.7855      0.7830      408     0.7873      1778   
+            MED: (med_map_mod:med_map_routehandles_initfrom_fieldbundle)                1920   1920   2        0.7718      0.7706      262     0.7739      1652   
+          MED:(med_phases_post_atm)                                                     1920   1920   1        0.0077      0.0051      972     0.0102      290    
+            MED:(med_phases_post_atm) map_atm2lnd                                       1920   1920   1        0.0043      0.0010      1727    0.0082      289    
+              MED: (med_map_mod:med_map_field_packed)                                   1920   1920   1        0.0043      0.0010      1727    0.0082      289    
+                MED: (med_map_mod:med_map_field_packed) map                             1920   1920   1        0.0042      0.0009      1727    0.0081      289    
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    1920   1920   1        0.0000      0.0000      1238    0.0000      1115   
+                MED: (med_map_mod:med_map_field_packed) copy from src                   1920   1920   1        0.0000      0.0000      1291    0.0000      564    
+            MED:(med_phases_post_atm) map_atm2ice                                       1920   1920   1        0.0022      0.0001      1530    0.0059      266    
+              MED: (med_map_mod:med_map_field_packed)                                   1920   1920   1        0.0022      0.0001      1530    0.0059      266    
+                MED: (med_map_mod:med_map_field_packed) map                             1920   1920   1        0.0021      0.0000      1530    0.0058      266    
+                MED: (med_map_mod:med_map_field_packed) copy from src                   1920   1920   1        0.0000      0.0000      307     0.0000      854    
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    1920   1920   1        0.0000      0.0000      313     0.0000      1224   
+            MED:(med_phases_post_atm) map_atm2ocn                                       1920   1920   1        0.0012      0.0001      623     0.0044      1165   
+              MED: (med_map_mod:med_map_field_packed)                                   1920   1920   1        0.0012      0.0001      623     0.0044      1165   
+                MED: (med_map_mod:med_map_field_packed) map                             1920   1920   1        0.0011      0.0000      610     0.0043      1165   
+                MED: (med_map_mod:med_map_field_packed) copy from src                   1920   1920   1        0.0000      0.0000      3       0.0000      1642   
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    1920   1920   1        0.0000      0.0000      152     0.0000      21     
+          MED:(med_phases_post_rof)                                                     1920   1920   1        0.0051      0.0041      1778    0.0061      1298   
+            MED:(med_phases_post_rof) map_rof2lnd                                       1920   1920   1        0.0038      0.0035      777     0.0044      1821   
+              MED: (med_map_mod:med_map_field_packed)                                   1920   1920   1        0.0038      0.0035      777     0.0044      1821   
+                MED: (med_map_mod:med_map_field_packed) map                             1920   1920   1        0.0037      0.0034      777     0.0043      1821   
+                MED: (med_map_mod:med_map_field_packed) copy from src                   1920   1920   1        0.0000      0.0000      902     0.0000      106    
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    1920   1920   1        0.0000      0.0000      1088    0.0000      1799   
+            MED:(med_phases_post_rof_mod: med_phases_post_rof_remove_negative_runoff)   1920   1920   2        0.0010      0.0002      1778    0.0022      1572   
+            MED:(med_phases_post_rof) map_rof2ice                                       1920   1920   1        0.0000      0.0000      273     0.0000      1817   
+              MED: (med_map_mod:med_map_field_packed)                                   1920   1920   1        0.0000      0.0000      1182    0.0000      1817   
+          MED:(med_phases_post_lnd)                                                     1920   1920   2        0.0036      0.0005      208     0.0072      266    
+            MED: (med_map_mod:med_map_field_packed)                                     1920   1920   2        0.0036      0.0005      208     0.0072      266    
+              MED: (med_map_mod:med_map_field_packed) map                               1920   1920   2        0.0032      0.0002      618     0.0070      266    
+              MED: (med_map_mod:med_map_field_packed) copy from src                     1920   1920   2        0.0001      0.0000      1687    0.0010      476    
+              MED: (med_map_mod:med_map_field_packed) copy to dest                      1920   1920   2        0.0000      0.0000      536     0.0001      681    
+          MED:(med_phases_prep_atm)                                                     1920   1920   1        0.0035      0.0010      320     0.0080      208    
+            MED: (med_map_mod:med_map_field_packed)                                     1920   1920   4        0.0021      0.0002      320     0.0063      1831   
+              MED: (med_map_mod:med_map_field_packed) map                               1920   1920   3        0.0019      0.0001      320     0.0061      1831   
+              MED: (med_map_mod:med_map_field_packed) copy to dest                      1920   1920   3        0.0000      0.0000      48      0.0000      1576   
+              MED: (med_map_mod:med_map_field_packed) copy from src                     1920   1920   3        0.0000      0.0000      1315    0.0000      245    
+            MED: (module_med_merge_mod: med_merge_auto)                                 1920   1920   1        0.0005      0.0002      1305    0.0020      1165   
+          MED:(med_phases_ocnalb_run)                                                   1920   1920   2        0.0023      0.0011      1731    0.0042      556    
+            MED:(med_phases_ocnalb_init)                                                1920   1920   1        0.0003      0.0001      1050    0.0012      1122   
+          MED: (med_fraction_set)                                                       1920   1920   2        0.0009      0.0001      673     0.0033      1902   
+            MED: (med_fraction_set) fbfrac(compatm)                                     1920   1920   2        0.0005      0.0000      254     0.0021      781    
+            MED: (med_fraction_set) fbfrac(compocn)                                     1920   1920   2        0.0003      0.0000      1834    0.0020      681    
+          MED:(med_phases_post_ice)                                                     1920   1920   1        0.0008      0.0000      1304    0.0024      972    
+            MED: (med_fraction_set)                                                     1920   1920   1        0.0008      0.0000      1304    0.0024      972    
+              MED: (med_fraction_set) fbfrac(compatm)                                   1920   1920   1        0.0004      0.0000      1304    0.0015      783    
+              MED: (med_fraction_set) fbfrac(compocn)                                   1920   1920   1        0.0004      0.0000      678     0.0024      972    
+          MED:(med_phases_post_rof_init)                                                1920   1920   1        0.0005      0.0004      1828    0.0008      1333   
+            MED:(med_phases_post_rof_mod: med_phases_post_rof_create_rof_field_bundle)  1920   1920   1        0.0004      0.0003      1828    0.0006      1408   
+          MED:(med_phases_post_ocn)                                                     1920   1920   1        0.0003      0.0001      1081    0.0017      860    
+            MED:(med_phases_post_ocn) map_ocn2ice                                       1920   1920   1        0.0003      0.0001      1064    0.0017      860    
+              MED: (med_map_mod:med_map_field_packed)                                   1920   1920   1        0.0003      0.0001      1064    0.0017      860    
+                MED: (med_map_mod:med_map_field_packed) map                             1920   1920   1        0.0002      0.0000      1062    0.0017      860    
+                MED: (med_map_mod:med_map_field_packed) copy from src                   1920   1920   1        0.0000      0.0000      1064    0.0000      734    
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    1920   1920   1        0.0000      0.0000      985     0.0000      1203   
+          MED:(med_phases_profile)                                                      1920   1920   1        0.0002      0.0001      1024    0.0012      372    
+        [MED-TO-ATM] RunPhase1                                                          1920   1920   1        0.0027      0.0003      1919    0.0051      651    
+        [ATM-TO-MED] RunPhase1                                                          1920   1920   2        0.0024      0.0017      1495    0.0038      277    
+        [LND-TO-MED] RunPhase1                                                          1920   1920   2        0.0006      0.0004      722     0.0022      404    
+        [ICE-TO-MED] RunPhase1                                                          1920   1920   2        0.0006      0.0004      1400    0.0021      438    
+        [ROF-TO-MED] RunPhase1                                                          1920   1920   2        0.0002      0.0002      1823    0.0003      1700   
+        [OCN-TO-MED] RunPhase1                                                          1920   1920   2        0.0002      0.0002      1223    0.0003      384    
+        [LND] IPDv01p5                                                                  1920   1920   1        0.0002      0.0001      560     0.0005      960    
+        [ICE] IPDv01p5                                                                  1920   1920   1        0.0001      0.0001      1016    0.0002      1699   
+        [ROF] IPDv01p5                                                                  1920   1920   1        0.0001      0.0001      1109    0.0001      1063   
+        [OCN] IPDv01p5                                                                  1920   1920   1        0.0001      0.0001      1020    0.0001      1536   
+        [ESM0001] IPDv05p8                                                              1920   1920   1        0.0000      0.0000      362     0.0001      50     
+      [ESM0001] IPDv02p1                                                                1920   1920   1        2.0329      2.0239      1302    2.0367      427    
+        [ICE] IPDv01p1                                                                  1920   1920   1        0.6284      0.6176      248     0.6303      634    
+          cice_init_total                                                               1920   1920   1        0.5871      0.5840      1247    0.5903      593    
+            cice_init1                                                                  1920   1920   1        0.1116      0.0906      1132    0.1247      154    
+        [LND] IPDv01p1                                                                  1920   1920   1        0.2223      0.2205      376     0.2327      248    
+        [ICE-TO-MED] IPDv05p3                                                           1920   1920   1        0.0863      0.0860      625     0.0881      346    
+        [MED-TO-ATM] IPDv05p3                                                           1920   1920   1        0.0848      0.0844      1382    0.0854      1287   
+        [MED-TO-LND] IPDv05p3                                                           1920   1920   1        0.0807      0.0805      161     0.0809      1152   
+        [ROF] IPDv01p1                                                                  1920   1920   1        0.0777      0.0747      1883    0.0801      772    
+        [MED] IPDv03p1                                                                  1920   1920   1        0.0768      0.0723      876     0.0819      386    
+        [LND-TO-MED] IPDv05p3                                                           1920   1920   1        0.0682      0.0681      323     0.0685      625    
+        [MED-TO-ICE] IPDv05p3                                                           1920   1920   1        0.0621      0.0619      1152    0.0622      1355   
+        [ATM] IPDv03p1                                                                  1920   1920   1        0.0258      0.0202      386     0.0328      1382   
+        [ATM-TO-MED] IPDv05p3                                                           1920   1920   1        0.0246      0.0236      345     0.0246      1661   
+        [ROF-TO-MED] IPDv05p3                                                           1920   1920   1        0.0109      0.0103      346     0.0111      1319   
+        [MED-TO-ROF] IPDv05p3                                                           1920   1920   1        0.0097      0.0094      1287    0.0107      345    
+        [OCN-TO-MED] IPDv05p3                                                           1920   1920   1        0.0095      0.0083      346     0.0096      1792   
+        [OCN] IPDv01p1                                                                  1920   1920   1        0.0073      0.0049      517     0.0102      351    
+        [MED-TO-ATM] IPDv05p2a                                                          1920   1920   1        0.0049      0.0041      1372    0.0057      1667   
+        [MED-TO-LND] IPDv05p2a                                                          1920   1920   1        0.0043      0.0036      1667    0.0047      768    
+        [MED-TO-ATM] IPDv05p2b                                                          1920   1920   1        0.0042      0.0037      643     0.0046      602    
+        [MED-TO-LND] IPDv05p2b                                                          1920   1920   1        0.0038      0.0036      932     0.0042      643    
+        [ICE-TO-MED] IPDv05p2b                                                          1920   1920   1        0.0038      0.0036      1024    0.0039      1051   
+        [ICE-TO-MED] IPDv05p2a                                                          1920   1920   1        0.0037      0.0035      896     0.0039      1152   
+        [MED-TO-ICE] IPDv05p2a                                                          1920   1920   1        0.0034      0.0032      768     0.0037      640    
+        [MED-TO-ICE] IPDv05p2b                                                          1920   1920   1        0.0034      0.0031      384     0.0035      1536   
+        [ATM-TO-MED] IPDv05p2a                                                          1920   1920   1        0.0032      0.0031      988     0.0034      255    
+        [ATM-TO-MED] IPDv05p2b                                                          1920   1920   1        0.0031      0.0029      1152    0.0032      896    
+        [LND-TO-MED] IPDv05p2a                                                          1920   1920   1        0.0029      0.0027      255     0.0032      896    
+        [LND-TO-MED] IPDv05p2b                                                          1920   1920   1        0.0029      0.0027      896     0.0031      1024   
+        [MED-TO-ATM] IPDv05p1                                                           1920   1920   1        0.0023      0.0007      794     0.0034      1795   
+        [MED-TO-ROF] IPDv05p2a                                                          1920   1920   1        0.0017      0.0014      640     0.0018      128    
+        [MED-TO-ROF] IPDv05p2b                                                          1920   1920   1        0.0016      0.0015      1034    0.0018      1152   
+        [MED-TO-LND] IPDv05p1                                                           1920   1920   1        0.0014      0.0004      1793    0.0018      793    
+        [ROF-TO-MED] IPDv05p2a                                                          1920   1920   1        0.0013      0.0012      128     0.0015      0      
+        [OCN-TO-MED] IPDv05p2a                                                          1920   1920   1        0.0013      0.0011      1034    0.0015      1474   
+        [OCN-TO-MED] IPDv05p2b                                                          1920   1920   1        0.0013      0.0011      1034    0.0014      1528   
+        [ROF-TO-MED] IPDv05p2b                                                          1920   1920   1        0.0012      0.0012      1287    0.0014      768    
+        [ESM0001] IPDv05p3                                                              1920   1920   1        0.0010      0.0007      623     0.0013      1651   
+        [MED] Init 0                                                                    1920   1920   1        0.0006      0.0002      1222    0.0051      0      
+        [ESM0001] IPDv05p2                                                              1920   1920   1        0.0005      0.0002      1861    0.0013      1372   
+        [ESM0001] IPDv03p2                                                              1920   1920   1        0.0005      0.0005      1878    0.0006      165    
+        [ICE-TO-MED] IPDv05p1                                                           1920   1920   1        0.0004      0.0004      1454    0.0004      502    
+        [LND-TO-MED] IPDv05p1                                                           1920   1920   1        0.0004      0.0004      1059    0.0005      1454   
+        [ATM-TO-MED] IPDv05p1                                                           1920   1920   1        0.0004      0.0004      1197    0.0004      1321   
+        [MED-TO-ICE] IPDv05p1                                                           1920   1920   1        0.0003      0.0003      717     0.0004      535    
+        [ROF-TO-MED] IPDv05p1                                                           1920   1920   1        0.0003      0.0003      689     0.0004      1341   
+        [MED-TO-ROF] IPDv05p1                                                           1920   1920   1        0.0003      0.0003      512     0.0004      1699   
+        [OCN-TO-MED] IPDv05p1                                                           1920   1920   1        0.0003      0.0003      384     0.0004      689    
+        [LND] Init 0                                                                    1920   1920   1        0.0002      0.0001      1220    0.0010      244    
+        [ICE] Init 0                                                                    1920   1920   1        0.0002      0.0001      488     0.0009      450    
+        [ATM] Init 0                                                                    1920   1920   1        0.0002      0.0001      1397    0.0010      1860   
+        [MED-TO-LND] Init 0                                                             1920   1920   1        0.0001      0.0001      468     0.0003      916    
+        [MED-TO-ROF] Init 0                                                             1920   1920   1        0.0001      0.0001      942     0.0002      1152   
+        [MED-TO-ICE] Init 0                                                             1920   1920   1        0.0001      0.0001      468     0.0002      1408   
+        [ROF-TO-MED] Init 0                                                             1920   1920   1        0.0001      0.0001      394     0.0001      1887   
+        [MED-TO-ATM] Init 0                                                             1920   1920   1        0.0001      0.0001      1868    0.0001      248    
+        [ATM-TO-MED] Init 0                                                             1920   1920   1        0.0001      0.0001      420     0.0001      994    
+        [OCN-TO-MED] Init 0                                                             1920   1920   1        0.0001      0.0001      1869    0.0002      1536   
+        [LND-TO-MED] Init 0                                                             1920   1920   1        0.0001      0.0001      1878    0.0001      882    
+        [ICE-TO-MED] Init 0                                                             1920   1920   1        0.0001      0.0001      265     0.0001      1749   
+        [OCN] Init 0                                                                    1920   1920   1        0.0001      0.0001      1235    0.0006      1744   
+        [ROF] Init 0                                                                    1920   1920   1        0.0001      0.0001      509     0.0004      1038   
+        [ESM0001] IPDv05p1                                                              1920   1920   1        0.0000      0.0000      1916    0.0000      1465   
+      (ensemble_driver.F90:SetModelServices)                                            1920   1920   1        0.2047      0.1993      1566    0.2180      1156   
+      [ESM0001] Init 0                                                                  1920   1920   1        0.0001      0.0001      962     0.0001      1408   
+      [ensemble] IPDv05p1                                                               1920   1920   1        0.0000      0.0000      1662    0.0001      1808   
+      [ensemble] IPDv05p4                                                               1920   1920   1        0.0000      0.0000      800     0.0001      1011   
+      [ensemble] IPDv05p3                                                               1920   1920   1        0.0000      0.0000      474     0.0001      637    
+      [ensemble] IPDv05p2                                                               1920   1920   1        0.0000      0.0000      485     0.0001      612    
+      [ensemble] IPDv05p8                                                               1920   1920   1        0.0000      0.0000      97      0.0001      303    
+      [ensemble] IPDv05p6                                                               1920   1920   1        0.0000      0.0000      1082    0.0001      1722   
+    [ensemble] RunPhase1                                                                1920   1920   1        90.5140     90.5132     307     90.5156     368    
+      [ESM0001] RunPhase1                                                               1920   1920   1        90.5135     90.5125     303     90.5152     342    
+        [ATM] RunPhase1                                                                 1920   1920   48       80.0574     79.6864     1810    80.1862     1082   
+          CAM_run2                                                                      1920   1920   49       35.2970     27.1567     1771    37.2422     1267   
+            phys_run2                                                                   1920   1920   49       32.4684     24.6034     1720    36.0025     1424   
+              ac_physics                                                                1920   1920   49       32.4123     24.5343     1720    35.9425     1424   
+                macrop_tend                                                             1920   1920   294      9.8035      7.5168      1651    10.6943     1534   
+                  clubb_tend_cam                                                        1920   1920   294      9.1863      6.9533      1651    10.0341     1534   
+                    clubb_tend_cam:ACCR                                                 1920   1920   882      7.0475      5.0782      1651    7.7813      527    
+                      clubb_tend_cam:advance_clubb_core_api                             1920   1920   588      5.6819      4.1238      1651    6.3106      527    
+                      clubb_tend_cam:flip-index                                         1920   1920   588      0.7738      0.5513      1859    0.8621      476    
+                    clubb_tend_cam:NAR                                                  1920   1920   1176     2.1319      1.8489      608     2.3430      941    
+                      qneg3                                                             1920   1920   34104    0.0729      0.0601      1726    0.0798      761    
+                    clubb_tend_cam:acc_copyin                                           1920   1920   588      0.0001      0.0001      168     0.0002      236    
+                    clubb_tend_cam:acc_copyout                                          1920   1920   294      0.0001      0.0001      762     0.0002      1218   
+                  qneg3                                                                 1920   1920   33516    0.0710      0.0583      1726    0.0771      1157   
+                adv_tracer_src_snk                                                      1920   1920   98       7.9431      4.9040      1720    9.6857      1439   
+                  chemdr                                                                1920   1920   98       7.0622      4.2545      1720    8.5110      1439   
+                    imp_sol                                                             1920   1920   98       2.2450      1.5545      1720    2.5592      229    
+                      lu_fac                                                            1920   1920   MULTIPLE 0.4708      0.3385      1720    0.5408      223    
+                      nln_mat                                                           1920   1920   MULTIPLE 0.3828      0.2691      1720    0.4383      212    
+                      lu_slv                                                            1920   1920   MULTIPLE 0.2389      0.1654      1720    0.2729      998    
+                      prod_loss                                                         1920   1920   MULTIPLE 0.1958      0.1373      1720    0.2270      212    
+                      lin_mat                                                           1920   1920   MULTIPLE 0.0264      0.0185      1724    0.0318      736    
+                    modal_gas-aer_exchng                                                1920   1920   98       0.7064      0.2999      1720    0.9103      587    
+                    modal_coag                                                          1920   1920   98       0.1118      0.0667      1720    0.1350      430    
+                    modal_nucl                                                          1920   1920   98       0.0775      0.0434      1720    0.1027      1255   
+                  qneg3                                                                 1920   1920   12642    0.0327      0.0280      1615    0.0354      1184   
+                microp_aero_run                                                         1920   1920   294      3.1844      2.2324      1719    4.3310      620    
+                  qneg3                                                                 1920   1920   6762     0.0172      0.0143      1672    0.0189      1202   
+                gw_tend                                                                 1920   1920   98       2.9617      2.1563      1903    3.5193      1360   
+                  qneg3                                                                 1920   1920   13230    0.0331      0.0289      1819    0.0357      1190   
+                radiation                                                               1920   1920   98       2.7941      1.9799      1726    3.7233      1360   
+                microp_tend                                                             1920   1920   294      2.7861      1.9782      1666    3.2208      57     
+                  microp_mg_tend                                                        1920   1920   294      2.5835      1.8328      1666    3.0058      57     
+                    qneg3                                                               1920   1920   2058     0.0092      0.0071      1788    0.0109      1544   
+                  qneg3                                                                 1920   1920   8232     0.0204      0.0167      1680    0.0222      72     
+                aerosol_wet_processes                                                   1920   1920   98       1.4090      0.9942      1657    1.9125      450    
+                  convect_deep_tend2                                                    1920   1920   98       0.1877      0.0926      664     0.4008      147    
+                    convtran2                                                           1920   1920   98       0.0980      0.0228      664     0.3089      210    
+                    qneg3                                                               1920   1920   10486    0.0229      0.0199      1713    0.0251      1202   
+                  aero_convproc                                                         1920   1920   98       0.1238      0.0596      673     0.3147      1035   
+                  qneg3                                                                 1920   1920   4116     0.0101      0.0086      1726    0.0111      1540   
+                aero_drydep                                                             1920   1920   98       0.5963      0.4431      1657    0.6634      162    
+                  qneg3                                                                 1920   1920   2058     0.0059      0.0050      1729    0.0065      642    
+                vertical_diffusion_tend                                                 1920   1920   98       0.4582      0.2930      1695    0.5493      1012   
+                  qneg3                                                                 1920   1920   13230    0.0314      0.0278      1809    0.0337      1200   
+                clubb_emissions_tend                                                    1920   1920   98       0.1931      0.1558      1683    0.2455      1152   
+                  qneg3                                                                 1920   1920   13132    0.0258      0.0210      1767    0.0286      983    
+                tphysac_init                                                            1920   1920   98       0.0260      0.0207      1061    0.0316      112    
+                  qneg4                                                                 1920   1920   98       0.0002      0.0001      1616    0.0004      0      
+                bc_history_write                                                        1920   1920   98       0.0258      0.0198      1592    0.0321      482    
+                tropopause                                                              1920   1920   98       0.0219      0.0136      1677    0.0395      370    
+                bc_cld_diag_history_write                                               1920   1920   98       0.0193      0.0131      1679    0.0269      482    
+                carma_timestep_tend                                                     1920   1920   196      0.0072      0.0045      1725    0.0095      956    
+                diag_surf                                                               1920   1920   98       0.0053      0.0038      1815    0.0063      603    
+                rayleigh_friction                                                       1920   1920   98       0.0047      0.0035      1679    0.0055      1167   
+                iondrag                                                                 1920   1920   98       0.0030      0.0022      1855    0.0035      1114   
+                qneg3                                                                   1920   1920   196      0.0005      0.0004      1616    0.0006      1231   
+              lightning_no_prod                                                         1920   1920   49       0.0546      0.0344      365     0.0842      1918   
+                shr_reprosum_int                                                        1920   1920   98       0.0528      0.0324      365     0.0829      1918   
+                  repro_sum_allr_minmax                                                 1920   1920   98       0.0483      0.0280      365     0.0785      1918   
+                  repro_sum_allr_i8                                                     1920   1920   98       0.0039      0.0038      1357    0.0041      135    
+                  repro_sum_loopb                                                       1920   1920   98       0.0001      0.0000      867     0.0001      625    
+                  repro_sum_loopa                                                       1920   1920   98       0.0000      0.0000      1351    0.0001      1332   
+                shr_reprosum_INF_NaN_Chk                                                1920   1920   98       0.0001      0.0001      1173    0.0002      1845   
+              physpkg_st2                                                               1920   1920   49       0.0009      0.0005      1557    0.0016      338    
+              carma_accumulate_stats                                                    1920   1920   49       0.0000      0.0000      1734    0.0001      1320   
+            stepon_run2                                                                 1920   1920   49       2.8282      0.7390      1564    11.0168     1874   
+              p_d_coupling                                                              1920   1920   49       2.8278      0.7387      1564    11.0165     1874   
+                phys2dyn                                                                1920   1920   49       1.6717      0.2428      1679    9.8056      1601   
+                  fvm:fill_halo_phys                                                    1920   1920   49       1.4180      0.1012      1642    9.6592      1601   
+                p_d_coupling:bndry_exchange                                             1920   1920   49       0.7811      0.0398      1724    8.6564      1769   
+                pd_copy                                                                 1920   1920   49       0.1720      0.0713      1896    0.3347      1058   
+            ionosphere_run2                                                             1920   1920   49       0.0000      0.0000      1870    0.0000      990    
+          CAM_run3                                                                      1920   1920   49       33.1447     31.1627     1426    40.9119     1700   
+            stepon_run3                                                                 1920   1920   49       33.1444     31.1624     1426    40.9117     1700   
+              dyn_run                                                                   1920   1920   49       32.6525     30.5692     1424    40.6782     1700   
+                prim_advec_tracers_fvm                                                  1920   1920   98       22.4292     13.6193     1596    24.8560     396    
+                  FVM:tracers_reconstruct                                               1920   1920   MULTIPLE 7.8873      5.0269      1771    10.1545     406    
+                    FVM:reconstruction:part#2                                           1920   1920   MULTIPLE 6.1688      3.8946      1771    8.0407      56     
+                    FVM:reconstruction:part#1                                           1920   1920   MULTIPLE 1.2141      0.7502      1639    2.4648      798    
+                    FVM:reconstruction:part#3                                           1920   1920   MULTIPLE 0.4398      0.2825      1719    0.5682      1318   
+                  fvm:fill_halo_fvm:large_Courant                                       1920   1920   98       3.1734      0.7742      1569    6.5184      1818   
+                  fvm:ghost_exchange:Qnhc                                               1920   1920   98       2.7324      1.2914      1662    4.9992      1902   
+                  fvm:orthogonal_swept_areas                                            1920   1920   98       2.6640      1.0135      1691    4.5571      1579   
+                  fvm:before_Qnhc                                                       1920   1920   98       2.5099      1.6831      1824    2.8051      1510   
+                  fvm:swept_flux                                                        1920   1920   MULTIPLE 2.3973      1.6448      1784    2.8434      496    
+                    fvm:swept_area:remap                                                1920   1920   MULTIPLE 0.6503      0.4289      1671    0.7707      1318   
+                    fvm:swept_area:get_high_order_w                                     1920   1920   MULTIPLE 0.4827      0.3309      1905    0.6399      1399   
+                    fvm:swept_area:get_gamma                                            1920   1920   MULTIPLE 0.3115      0.2079      1707    0.3788      1322   
+                  fvm:large_Courant_number_increment                                    1920   1920   98       0.7293      0.0480      1607    1.0043      16     
+                  fvm:end_of_reconstruct_subroutine                                     1920   1920   98       0.3078      0.0194      1895    0.5097      871    
+                prim_advance_exp                                                        1920   1920   294      5.2564      3.1256      1272    18.4826     1881   
+                  compute_and_apply_rhs                                                 1920   1920   1470     3.2682      1.6276      1421    16.4823     1881   
+                  advance_hypervis                                                      1920   1920   294      1.9549      1.3401      468     2.9589      1737   
+                    sponge_diff                                                         1920   1920   294      0.3190      0.1769      469     0.6457      1771   
+                  prim_adv_prep                                                         1920   1920   294      0.0280      0.0172      1839    0.0382      1083   
+                cslam2gll                                                               1920   1920   98       1.6869      0.5605      1795    9.9541      1771   
+                  fvm:fill_halo_cslam2gll                                               1920   1920   98       1.3595      0.2813      1544    9.7246      1771   
+                vertical_remap                                                          1920   1920   98       1.4315      0.8144      1560    2.0897      868    
+                applyCAMforc                                                            1920   1920   98       0.3417      0.0412      1760    0.5619      1548   
+              comp_adv_tends2                                                           1920   1920   49       0.2786      0.0313      1680    0.3579      1550   
+              comp_adv_tends1                                                           1920   1920   49       0.2124      0.0386      1816    0.3658      1545   
+          CAM_run4                                                                      1920   1920   49       8.6444      8.6381      389     8.6602      1911   
+            cam_write_restart                                                           1920   1920   1        8.6423      8.6365      388     8.6575      1680   
+              get_decomp                                                                1920   1920   139      0.8129      0.5708      1808    0.9049      257    
+                newdecomp                                                               1920   1920   6        0.8111      0.5688      1808    0.9029      257    
+                get_filemap                                                             1920   1920   6        0.0013      0.0012      1651    0.0039      219    
+            wshist                                                                      1920   1920   49       0.0012      0.0007      1785    0.0039      1824   
+            cam_run4_wrapup                                                             1920   1920   49       0.0002      0.0001      719     0.0005      1824   
+          CAM_run1                                                                      1920   1920   49       2.8240      2.4231      379     3.4050      1671   
+            phys_run1                                                                   1920   1920   49       1.8394      1.4164      393     2.7940      1771   
+              bc_physics                                                                1920   1920   49       1.2413      0.8413      1810    1.3776      1082   
+                moist_convection                                                        1920   1920   98       0.6501      0.4490      1810    0.7362      209    
+                  convect_deep_tend                                                     1920   1920   98       0.6385      0.4385      1810    0.7249      209    
+                    zm_convr_run                                                        1920   1920   98       0.2027      0.1126      1657    0.2671      261    
+                    convtran1                                                           1920   1920   98       0.0258      0.0167      1904    0.0452      232    
+                    zm_conv_momtran_run                                                 1920   1920   98       0.0136      0.0055      1824    0.0189      413    
+                    zm_conv_evap_run                                                    1920   1920   98       0.0114      0.0079      1730    0.0144      1885   
+                    qneg3                                                               1920   1920   882      0.0021      0.0016      1810    0.0024      781    
+                bc_init                                                                 1920   1920   98       0.4240      0.2529      1810    0.5035      1549   
+                  qneg3                                                                 1920   1920   98       0.0327      0.0200      1728    0.0578      1690   
+                dry_adjustment                                                          1920   1920   98       0.1282      0.1051      1726    0.2092      1790   
+                  qneg3                                                                 1920   1920   98       0.0003      0.0002      1810    0.0005      1673   
+                energy_fixer                                                            1920   1920   98       0.0287      0.0217      1748    0.0332      1152   
+                cam_export                                                              1920   1920   98       0.0055      0.0042      1725    0.0074      1887   
+                diag_export                                                             1920   1920   98       0.0015      0.0012      1834    0.0019      1575   
+                diag_physvar_ic                                                         1920   1920   98       0.0007      0.0005      1446    0.0015      1887   
+              physpkg_st1                                                               1920   1920   49       0.5977      0.1742      383     1.6642      1771   
+                chk_en_gmean                                                            1920   1920   49       0.4934      0.0696      383     1.5613      1771   
+                  gmean_arr                                                             1920   1920   49       0.4931      0.0694      383     1.5610      1771   
+                    gmean_fixed_repro                                                   1920   1920   49       0.4930      0.0693      383     1.5609      1771   
+                      shr_reprosum_int                                                  1920   1920   49       0.4925      0.0689      383     1.5604      1771   
+                        repro_sum_allr_minmax                                           1920   1920   49       0.4892      0.0656      383     1.5574      1771   
+                        repro_sum_allr_i8                                               1920   1920   49       0.0025      0.0022      1640    0.0029      455    
+                        repro_sum_loopb                                                 1920   1920   49       0.0002      0.0002      1619    0.0003      324    
+                        repro_sum_loopa                                                 1920   1920   49       0.0001      0.0001      1839    0.0002      912    
+                      shr_reprosum_INF_NaN_Chk                                          1920   1920   49       0.0002      0.0001      1716    0.0003      384    
+                advance_trcdata                                                         1920   1920   4067     0.0275      0.0229      1802    0.0303      1360   
+                  interpolate_trcdata                                                   1920   1920   4067     0.0194      0.0146      1793    0.0222      333    
+                gmean_arr                                                               1920   1920   245      0.0185      0.0166      0       0.0188      1095   
+                  gmean_fixed_repro                                                     1920   1920   245      0.0185      0.0165      0       0.0187      1095   
+                    shr_reprosum_int                                                    1920   1920   245      0.0180      0.0161      0       0.0183      1652   
+                      repro_sum_allr_minmax                                             1920   1920   245      0.0096      0.0076      0       0.0101      1652   
+                      repro_sum_allr_i8                                                 1920   1920   245      0.0078      0.0075      561     0.0080      1354   
+                      repro_sum_loopb                                                   1920   1920   245      0.0002      0.0001      1598    0.0003      561    
+                      repro_sum_loopa                                                   1920   1920   245      0.0001      0.0001      1878    0.0001      385    
+                    shr_reprosum_INF_NaN_Chk                                            1920   1920   245      0.0002      0.0001      1593    0.0002      726    
+            stepon_run1                                                                 1920   1920   49       0.9842      0.2364      1879    1.4128      922    
+              d_p_coupling                                                              1920   1920   49       0.9830      0.2354      1879    1.4106      922    
+                dpcopy                                                                  1920   1920   49       0.3469      0.0562      1914    0.4753      1502   
+                dyn2phys                                                                1920   1920   49       0.2340      0.0460      1771    0.3120      56     
+                derived_phys                                                            1920   1920   49       0.0558      0.0295      1824    0.0829      677    
+                  qneg3                                                                 1920   1920   98       0.0309      0.0175      1711    0.0466      878    
+          CAM_import                                                                    1920   1920   48       0.0226      0.0218      1821    0.0251      233    
+          CAM_export                                                                    1920   1920   48       0.0058      0.0028      1777    0.0110      1887   
+          CAM_adv_timestep                                                              1920   1920   49       0.0001      0.0001      737     0.0004      1824   
+        [LND] RunPhase1                                                                 1920   1920   48       7.3413      7.2637      995     7.4206      343    
+          ctsm_run                                                                      1920   1920   48       7.3031      7.2264      995     7.3835      343    
+            clm_drv_io                                                                  1920   1920   48       7.0093      7.0070      1180    7.0119      612    
+              clm_drv_io_wrest                                                          1920   1920   1        7.0089      7.0068      1180    7.0110      608    
+              clm_drv_io_htapes                                                         1920   1920   48       0.0004      0.0002      1121    0.0015      947    
+            bgp_fluxes                                                                  1920   1920   48       0.0765      0.0520      840     0.1149      207    
+              canflux                                                                   1920   1920   48       0.0664      0.0420      840     0.1053      207    
+                can_iter                                                                1920   1920   48       0.0531      0.0295      840     0.0924      1312   
+                LUNA                                                                    1920   1920   1        0.0002      0.0000      577     0.0013      780    
+              bgflux                                                                    1920   1920   48       0.0050      0.0034      787     0.0077      738    
+              uflux                                                                     1920   1920   48       0.0032      0.0010      803     0.0062      1477   
+              bgplake                                                                   1920   1920   48       0.0016      0.0004      928     0.0035      323    
+            bgc                                                                         1920   1920   48       0.0332      0.0194      624     0.0485      23     
+            depvel                                                                      1920   1920   48       0.0255      0.0118      608     0.0409      1620   
+            hbuf                                                                        1920   1920   48       0.0246      0.0196      768     0.0306      1620   
+            soiltemperature                                                             1920   1920   48       0.0237      0.0127      994     0.0396      937    
+              SoilTempBandDiag                                                          1920   1920   48       0.0070      0.0032      597     0.0154      940    
+              SoilThermProp                                                             1920   1920   48       0.0035      0.0017      597     0.0057      252    
+              PhaseChangebeta                                                           1920   1920   48       0.0024      0.0010      994     0.0056      933    
+              PhaseChangeH2osfc                                                         1920   1920   48       0.0003      0.0001      218     0.0011      896    
+            hydro_without_drainage                                                      1920   1920   48       0.0234      0.0148      210     0.0459      368    
+            surfalb                                                                     1920   1920   23       0.0163      0.0031      1551    0.0556      921    
+            dyn_subgrid                                                                 1920   1920   48       0.0108      0.0061      850     0.0166      1863   
+            surfrad                                                                     1920   1920   48       0.0083      0.0045      358     0.0121      166    
+            bgp1                                                                        1920   1920   48       0.0071      0.0031      358     0.0113      1308   
+            lnd2atm                                                                     1920   1920   48       0.0049      0.0031      582     0.0076      1613   
+            begwbal                                                                     1920   1920   96       0.0046      0.0019      0       0.0081      394    
+            hydro1                                                                      1920   1920   48       0.0044      0.0018      222     0.0077      1850   
+            lakeTemp                                                                    1920   1920   48       0.0041      0.0016      936     0.0068      1632   
+            drvinit                                                                     1920   1920   48       0.0034      0.0013      775     0.0062      742    
+            balchk                                                                      1920   1920   48       0.0031      0.0014      1277    0.0058      246    
+            accum                                                                       1920   1920   48       0.0031      0.0020      330     0.0058      381    
+            bgp2                                                                        1920   1920   48       0.0031      0.0018      577     0.0056      948    
+              bgp2_loop_3                                                               1920   1920   48       0.0008      0.0003      331     0.0013      192    
+              bgp2_loop_1                                                               1920   1920   48       0.0006      0.0002      865     0.0017      96     
+              bgp2_loop_2                                                               1920   1920   48       0.0005      0.0002      210     0.0013      941    
+              bgp2_loop_4                                                               1920   1920   48       0.0002      0.0001      1270    0.0003      404    
+            hydro2_drainage                                                             1920   1920   48       0.0024      0.0011      210     0.0045      550    
+            hylake                                                                      1920   1920   48       0.0023      0.0009      1675    0.0049      1391   
+            hdmdyn_strd_adv_total                                                       1920   1920   48       0.0022      0.0020      610     0.0026      192    
+              hdmdyn_strd_adv_tint                                                      1920   1920   48       0.0019      0.0017      610     0.0023      192    
+              hdmdyn_strd_adv_readLBUB                                                  1920   1920   48       0.0001      0.0001      1502    0.0002      807    
+                hdmdyn_readLBUB_setup                                                   1920   1920   48       0.0000      0.0000      1523    0.0001      807    
+                hdmdyn_readLBUB_filemgt                                                 1920   1920   48       0.0000      0.0000      626     0.0000      1152   
+            urbalb                                                                      1858   1858   23       0.0009      0.0002      526     0.0031      1170   
+            patch2col                                                                   1920   1920   48       0.0007      0.0003      359     0.0020      669    
+            snow_init                                                                   1920   1920   48       0.0004      0.0001      1893    0.0012      1371   
+            SatellitePhenology                                                          1920   1920   23       0.0004      0.0001      1312    0.0019      699    
+            decomp_vert                                                                 1920   1920   48       0.0003      0.0002      1653    0.0004      393    
+            interpMonthlyVeg                                                            1920   1920   48       0.0001      0.0001      1661    0.0002      176    
+            lnd2glc                                                                     1920   1920   48       0.0001      0.0000      1385    0.0001      1356   
+            begcnbal_grc                                                                1920   1920   48       0.0000      0.0000      1700    0.0000      851    
+            begcnbal_col                                                                1920   1920   48       0.0000      0.0000      114     0.0000      342    
+          lc_lnd_export                                                                 1920   1920   48       0.0046      0.0042      192     0.0054      1523   
+          lc_lnd_import                                                                 1920   1920   48       0.0045      0.0024      1514    0.0064      1756   
+          shr_orb_decl                                                                  1920   1920   48       0.0003      0.0003      981     0.0031      0      
+          lc_ctsm2_adv_timestep                                                         1920   1920   48       0.0001      0.0001      897     0.0001      1007   
+        [ICE] RunPhase1                                                                 1920   1920   48       1.1718      1.1260      151     1.2008      1409   
+          cice_run_total                                                                1920   1920   48       1.1587      1.1120      151     1.1884      1409   
+            cice_run_presc                                                              1920   1920   48       0.8379      0.8335      557     0.8415      1840   
+              cice_pice_strd_adv_total                                                  1920   1920   48       0.8334      0.8323      1626    0.8353      1814   
+                cice_pice_strd_adv_readLBUB                                             1920   1920   48       0.8312      0.8302      1630    0.8330      1670   
+                  cice_pice_readLBUB_fbound                                             1920   1920   1        0.8194      0.8184      1630    0.8211      644    
+                  cice_pice_readLBUB_LB_readpio                                         1920   1920   1        0.0024      0.0022      1153    0.0026      1494   
+                  cice_pice_readLBUB_UB_readpio                                         1920   1920   1        0.0007      0.0004      0       0.0008      1665   
+                  cice_pice_readLBUB_setup                                              1920   1920   48       0.0001      0.0000      1874    0.0001      258    
+                  cice_pice_readLBUB_filemgt                                            1920   1920   48       0.0000      0.0000      1368    0.0001      0      
+                cice_pice_strd_adv_tint                                                 1920   1920   48       0.0019      0.0017      364     0.0022      1805   
+            cice_run_export                                                             1920   1920   48       0.0232      0.0219      1400    0.0263      1235   
+            cice_run_import                                                             1920   1920   48       0.0059      0.0032      185     0.0084      641    
+              cice_imp_ocn                                                              1920   1920   48       0.0003      0.0001      1801    0.0011      409    
+              cice_imp_atm                                                              1920   1920   48       0.0001      0.0001      306     0.0002      0      
+        [ROF] RunPhase1                                                                 1920   1920   8        0.6787      0.6718      1774    0.6859      1855   
+          mosartr_tot                                                                   1920   1920   8        0.6764      0.6692      1780    0.6840      1854   
+            mosartr_rest                                                                1920   1920   1        0.6453      0.6441      512     0.6466      1537   
+            mosartr_subcycling                                                          1920   1920   8        0.0181      0.0047      1500    0.0361      1857   
+              mosartr_euler                                                             1920   1920   8        0.0175      0.0046      1500    0.0352      1857   
+                mosartr_SMeroutUp                                                       1920   1920   120      0.0137      0.0024      1500    0.0301      1857   
+                mosartr_chanroute                                                       1920   1920   120      0.0022      0.0012      1495    0.0036      152    
+                mosartr_subnetwork                                                      1920   1920   120      0.0011      0.0005      782     0.0020      1848   
+                mosartr_hillslope                                                       1920   1920   24       0.0001      0.0000      1014    0.0002      1569   
+            mosartr_SMdirect                                                            1920   1920   8        0.0108      0.0005      546     0.0260      61     
+            mosartr_budgetset                                                           1920   1920   1        0.0010      0.0000      1019    0.0018      669    
+            mosartr_budgetcheck                                                         1920   1920   1        0.0007      0.0000      1433    0.0020      0      
+            mosartr_hbuf                                                                1920   1920   8        0.0002      0.0001      714     0.0009      1066   
+            mosartr_htapes                                                              1920   1920   8        0.0001      0.0000      475     0.0001      1464   
+            mosartr_flood                                                               1920   1920   8        0.0000      0.0000      652     0.0006      1675   
+            mosartr_irrig                                                               1920   1920   8        0.0000      0.0000      1825    0.0000      1337   
+          lc_mosart_import                                                              1920   1920   8        0.0004      0.0001      1016    0.0016      1909   
+          lc_rof_export                                                                 1920   1920   8        0.0003      0.0002      238     0.0003      1423   
+        [MED] med_phases_restart_write                                                  1920   1920   8        0.4352      0.4338      1817    0.4364      1097   
+          MED:(med_phases_restart_write)                                                1920   1920   8        0.4344      0.4332      1817    0.4352      566    
+        [ATM-TO-MED] RunPhase1                                                          1920   1920   48       0.1615      0.0213      3       0.5408      1810   
+        [MED] med_phases_prep_rof                                                       1920   1920   8        0.1010      0.0946      1849    0.1044      1661   
+          MED:(med_phases_prep_rof_mod: med_phases_prep_rof)                            1920   1920   8        0.1001      0.0937      1849    0.1035      1661   
+            MED:(med_phases_prep_rof_mod: med_phases_prep_rof_irrig)                    1920   1920   8        0.0631      0.0611      1634    0.0645      775    
+            MED: (med_map_mod:med_map_field_packed)                                     1920   1920   8        0.0332      0.0268      1849    0.0376      1634   
+              MED: (med_map_mod:med_map_field_packed) map                               1920   1920   8        0.0327      0.0263      1849    0.0371      1634   
+              MED: (med_map_mod:med_map_field_packed) copy to dest                      1920   1920   8        0.0001      0.0000      1023    0.0001      1807   
+              MED: (med_map_mod:med_map_field_packed) copy from src                     1920   1920   8        0.0000      0.0000      17      0.0001      1622   
+            MED: (module_med_merge_mod: med_merge_auto)                                 1920   1920   8        0.0009      0.0003      1873    0.0016      1570   
+        [MED] med_phases_prep_atm                                                       1920   1920   48       0.0752      0.0602      299     0.1112      1447   
+          MED:(med_phases_prep_atm)                                                     1920   1920   48       0.0709      0.0559      299     0.1068      1447   
+            MED: (med_map_mod:med_map_field_packed)                                     1920   1920   192      0.0322      0.0173      299     0.0689      1720   
+              MED: (med_map_mod:med_map_field_packed) map                               1920   1920   192      0.0205      0.0054      299     0.0580      1720   
+              MED: (med_map_mod:med_map_field_packed) copy from src                     1920   1920   192      0.0015      0.0013      1490    0.0018      542    
+              MED: (med_map_mod:med_map_field_packed) copy to dest                      1920   1920   192      0.0013      0.0012      1756    0.0016      519    
+            MED: (module_med_merge_mod: med_merge_auto)                                 1920   1920   48       0.0096      0.0090      1375    0.0105      1801   
+        [MED] med_phases_post_atm                                                       1920   1920   48       0.0526      0.0385      1907    0.1801      0      
+          MED:(med_phases_post_atm)                                                     1920   1920   48       0.0460      0.0317      1907    0.1720      0      
+            MED:(med_phases_post_atm) map_atm2lnd                                       1920   1920   48       0.0198      0.0087      1876    0.0354      150    
+              MED: (med_map_mod:med_map_field_packed)                                   1920   1920   48       0.0197      0.0086      1876    0.0353      150    
+                MED: (med_map_mod:med_map_field_packed) map                             1920   1920   48       0.0155      0.0045      1876    0.0311      150    
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    1920   1920   48       0.0011      0.0008      1855    0.0015      897    
+                MED: (med_map_mod:med_map_field_packed) copy from src                   1920   1920   48       0.0006      0.0006      47      0.0008      1732   
+            MED:(med_phases_post_atm) map_atm2ocn                                       1920   1920   48       0.0143      0.0070      623     0.1189      0      
+              MED: (med_map_mod:med_map_field_packed)                                   1920   1920   48       0.0142      0.0069      623     0.1187      0      
+                MED: (med_map_mod:med_map_field_packed) map                             1920   1920   48       0.0088      0.0014      623     0.1104      0      
+                MED: (med_map_mod:med_map_field_packed) copy from src                   1920   1920   48       0.0008      0.0006      1856    0.0011      0      
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    1920   1920   48       0.0006      0.0004      74      0.0007      360    
+            MED:(med_phases_post_atm) map_atm2ice                                       1920   1920   48       0.0110      0.0055      1301    0.0423      1      
+              MED: (med_map_mod:med_map_field_packed)                                   1920   1920   48       0.0109      0.0054      1301    0.0423      1      
+                MED: (med_map_mod:med_map_field_packed) map                             1920   1920   48       0.0066      0.0012      1301    0.0379      1      
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    1920   1920   48       0.0009      0.0007      11      0.0011      604    
+                MED: (med_map_mod:med_map_field_packed) copy from src                   1920   1920   48       0.0009      0.0007      104     0.0011      1916   
+            MED:(med_phases_history_write_comp_aux)                                     1920   1920   48       0.0001      0.0001      452     0.0002      1537   
+            MED:(med_phases_history_write_inst_comp)                                    1920   1920   48       0.0001      0.0001      66      0.0001      747    
+            MED:(med_phases_history_write_comp_avg)                                     1920   1920   48       0.0001      0.0000      21      0.0001      746    
+        [MED] med_phases_post_ice                                                       1920   1920   48       0.0494      0.0086      335     0.1101      650    
+          MED:(med_phases_post_ice)                                                     1920   1920   48       0.0450      0.0041      335     0.1057      650    
+            MED: (med_fraction_set)                                                     1920   1920   48       0.0446      0.0037      335     0.1052      650    
+              MED: (med_fraction_set) fbfrac(compatm)                                   1920   1920   48       0.0284      0.0011      252     0.0896      1798   
+              MED: (med_fraction_set) fbfrac(compocn)                                   1920   1920   48       0.0157      0.0006      804     0.0850      1891   
+            MED:(med_phases_history_write_comp_aux)                                     1920   1920   48       0.0001      0.0001      1451    0.0001      1579   
+            MED:(med_phases_history_write_inst_comp)                                    1920   1920   48       0.0000      0.0000      614     0.0001      974    
+            MED:(med_phases_history_write_comp_avg)                                     1920   1920   48       0.0000      0.0000      1495    0.0001      1597   
+        [MED] med_phases_prep_lnd                                                       1920   1920   48       0.0384      0.0371      538     0.0419      1235   
+          MED:(med_phases_prep_lnd)                                                     1920   1920   48       0.0335      0.0327      1875    0.0374      1235   
+            MED:(med_phases_prep_lnd) merge                                             1920   1920   48       0.0057      0.0054      1875    0.0062      1802   
+              MED: (module_med_merge_mod: med_merge_auto)                               1920   1920   48       0.0056      0.0054      1874    0.0061      1801   
+        [MED] med_phases_post_lnd                                                       1920   1920   48       0.0353      0.0145      1487    0.1038      805    
+          MED:(med_phases_post_lnd)                                                     1920   1920   48       0.0307      0.0100      1487    0.0993      805    
+            MED: (med_map_mod:med_map_field_packed)                                     1920   1920   48       0.0293      0.0084      418     0.0982      805    
+              MED: (med_map_mod:med_map_field_packed) map                               1920   1920   48       0.0243      0.0034      418     0.0933      805    
+              MED: (med_map_mod:med_map_field_packed) copy from src                     1920   1920   48       0.0011      0.0009      1355    0.0013      295    
+              MED: (med_map_mod:med_map_field_packed) copy to dest                      1920   1920   48       0.0010      0.0008      817     0.0013      415    
+            MED:(med_phases_prep_rof_mod: med_phases_prep_rof_accum)                    1920   1920   48       0.0009      0.0006      1143    0.0019      1250   
+            MED:(med_phases_history_write_comp_aux)                                     1920   1920   48       0.0001      0.0001      919     0.0001      591    
+            MED:(med_phases_history_write_inst_comp)                                    1920   1920   48       0.0001      0.0000      1782    0.0001      474    
+            MED:(med_phases_history_write_comp_avg)                                     1920   1920   48       0.0000      0.0000      847     0.0001      567    
+        [MED] med_phases_ocnalb_run                                                     1920   1920   48       0.0324      0.0054      517     0.1088      229    
+          MED:(med_phases_ocnalb_run)                                                   1920   1920   48       0.0286      0.0017      517     0.1050      226    
+        [MED] med_phases_aofluxes_run                                                   1920   1920   48       0.0320      0.0225      1418    0.0429      282    
+          MED:(med_aofluxes_init)                                                       1920   1920   1        0.0254      0.0174      1368    0.0369      282    
+          MED: (med_phases_aofluxes_run)                                                1920   1920   48       0.0026      0.0002      1106    0.0041      1019   
+            MED:(med_aofluxes_update)                                                   1920   1920   48       0.0014      0.0001      1670    0.0028      1283   
+        [MED] med_phases_prep_ice                                                       1920   1920   48       0.0320      0.0310      1081    0.0346      1235   
+          MED:(med_phases_prep_ice)                                                     1920   1920   48       0.0273      0.0267      1043    0.0302      1235   
+            MED: (module_med_merge_mod: med_merge_auto)                                 1920   1920   48       0.0053      0.0050      700     0.0057      1804   
+        [MED-TO-ATM] RunPhase1                                                          1920   1920   48       0.0318      0.0098      1919    0.0472      657    
+        [MED] med_phases_post_ocn                                                       1920   1920   48       0.0261      0.0085      729     0.1295      214    
+          MED:(med_phases_post_ocn)                                                     1920   1920   48       0.0214      0.0039      729     0.1249      214    
+            MED:(med_phases_post_ocn) map_ocn2ice                                       1920   1920   48       0.0207      0.0034      1105    0.1241      214    
+              MED: (med_map_mod:med_map_field_packed)                                   1920   1920   48       0.0206      0.0033      1105    0.1240      214    
+                MED: (med_map_mod:med_map_field_packed) map                             1920   1920   48       0.0177      0.0005      970     0.1210      214    
+                MED: (med_map_mod:med_map_field_packed) copy from src                   1920   1920   48       0.0003      0.0003      992     0.0004      1750   
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    1920   1920   48       0.0002      0.0002      1747    0.0003      1809   
+            MED:(med_phases_history_write_comp_aux)                                     1920   1920   48       0.0001      0.0001      1891    0.0004      1516   
+            MED:(med_phases_history_write_inst_comp)                                    1920   1920   48       0.0001      0.0001      790     0.0005      950    
+            MED:(med_phases_history_write_comp_avg)                                     1920   1920   48       0.0000      0.0000      877     0.0001      1442   
+        [OCN] RunPhase1                                                                 1920   1920   48       0.0230      0.0216      0       0.0241      1877   
+          DOCN_RUN                                                                      1920   1920   48       0.0165      0.0149      0       0.0172      473    
+            docn_strdata_advance                                                        1920   1920   48       0.0011      0.0010      848     0.0013      1617   
+              docn_strd_adv_total                                                       1920   1920   48       0.0010      0.0009      848     0.0012      1605   
+                docn_strd_adv_tint                                                      1920   1920   48       0.0008      0.0007      992     0.0009      1605   
+                docn_strd_adv_readLBUB                                                  1920   1920   48       0.0001      0.0001      346     0.0002      1356   
+                  docn_readLBUB_setup                                                   1920   1920   48       0.0000      0.0000      718     0.0001      1680   
+                  docn_readLBUB_filemgt                                                 1920   1920   48       0.0000      0.0000      667     0.0000      1356   
+            docn_dfield_copy                                                            1920   1920   48       0.0003      0.0002      1020    0.0004      1608   
+        [MED] med_phases_post_rof                                                       1920   1920   8        0.0204      0.0156      1609    0.0293      1817   
+          MED:(med_phases_post_rof)                                                     1920   1920   8        0.0196      0.0148      1609    0.0285      1817   
+            MED:(med_phases_post_rof) map_rof2lnd                                       1920   1920   8        0.0104      0.0074      777     0.0187      1817   
+              MED: (med_map_mod:med_map_field_packed)                                   1920   1920   8        0.0104      0.0074      777     0.0187      1817   
+                MED: (med_map_mod:med_map_field_packed) map                             1920   1920   8        0.0099      0.0069      777     0.0181      1817   
+                MED: (med_map_mod:med_map_field_packed) copy from src                   1920   1920   8        0.0000      0.0000      1300    0.0001      470    
+                MED: (med_map_mod:med_map_field_packed) copy to dest                    1920   1920   8        0.0000      0.0000      1497    0.0001      440    
+            MED:(med_phases_post_rof_mod: med_phases_post_rof_remove_negative_runoff)   1920   1920   16       0.0087      0.0058      1854    0.0126      1545   
+            MED:(med_phases_history_write_comp_aux)                                     1920   1920   8        0.0001      0.0001      1613    0.0001      896    
+            MED:(med_phases_post_rof) map_rof2ice                                       1920   1920   8        0.0001      0.0001      916     0.0002      1821   
+              MED: (med_map_mod:med_map_field_packed)                                   1920   1920   8        0.0001      0.0001      916     0.0002      1821   
+            MED:(med_phases_history_write_inst_comp)                                    1920   1920   8        0.0000      0.0000      1268    0.0001      398    
+            MED:(med_phases_history_write_comp_avg)                                     1920   1920   8        0.0000      0.0000      760     0.0001      908    
+        [ICE-TO-MED] RunPhase1                                                          1920   1920   48       0.0196      0.0085      1006    0.0697      511    
+        [LND-TO-MED] RunPhase1                                                          1920   1920   48       0.0191      0.0090      1280    0.0786      384    
+        [MED-TO-ICE] RunPhase1                                                          1920   1920   48       0.0146      0.0079      1506    0.0432      2      
+        [MED-TO-LND] RunPhase1                                                          1920   1920   48       0.0144      0.0093      1505    0.0319      219    
+        [OCN-TO-MED] RunPhase1                                                          1920   1920   48       0.0055      0.0049      1384    0.0074      740    
+        [MED] med_phases_history_write                                                  1920   1920   8        0.0015      0.0007      1625    0.0023      723    
+          MED:(med_phases_history_write)                                                1920   1920   8        0.0000      0.0000      282     0.0001      1397   
+        [MED-TO-ROF] RunPhase1                                                          1920   1920   8        0.0010      0.0008      1873    0.0014      1729   
+        [ROF-TO-MED] RunPhase1                                                          1920   1920   8        0.0010      0.0009      1199    0.0012      1655   
+        [MED] med_phases_profile                                                        1920   1920   8        0.0007      0.0007      1178    0.0009      1      
+          MED:(med_phases_profile)                                                      1920   1920   8        0.0001      0.0001      1498    0.0002      0      
+    [ensemble] FinalizePhase1                                                           1920   1920   1        0.0102      0.0063      293     0.0123      548    
+      [ESM0001] FinalizePhase1                                                          1920   1920   1        0.0098      0.0059      379     0.0119      548    
+        [ATM] FinalizePhase1                                                            1920   1920   1        0.0024      0.0003      341     0.0029      1317   
+        [MED-TO-ATM] FinalizePhase1                                                     1920   1920   1        0.0002      0.0001      312     0.0009      376    
+        [MED-TO-LND] FinalizePhase1                                                     1920   1920   1        0.0001      0.0001      848     0.0002      27     
+        [LND-TO-MED] FinalizePhase1                                                     1920   1920   1        0.0001      0.0001      1782    0.0001      1872   
+        [MED-TO-ICE] FinalizePhase1                                                     1920   1920   1        0.0001      0.0001      278     0.0002      22     
+        [ICE-TO-MED] FinalizePhase1                                                     1920   1920   1        0.0001      0.0001      321     0.0002      530    
+        [ATM-TO-MED] FinalizePhase1                                                     1920   1920   1        0.0001      0.0001      1129    0.0002      1870   
+        [MED-TO-ROF] FinalizePhase1                                                     1920   1920   1        0.0001      0.0001      290     0.0001      1863   
+        [OCN-TO-MED] FinalizePhase1                                                     1920   1920   1        0.0001      0.0001      311     0.0001      512    
+        [ROF-TO-MED] FinalizePhase1                                                     1920   1920   1        0.0001      0.0001      782     0.0002      26     
+        [MED] FinalizePhase1                                                            1920   1920   1        0.0001      0.0000      295     0.0003      1233   
+        [LND] FinalizePhase1                                                            1920   1920   1        0.0001      0.0001      291     0.0001      768    
+        [ICE] FinalizePhase1                                                            1920   1920   1        0.0000      0.0000      319     0.0001      768    
+        [OCN] FinalizePhase1                                                            1920   1920   1        0.0000      0.0000      293     0.0001      768    
+        [ROF] FinalizePhase1                                                            1920   1920   1        0.0000      0.0000      288     0.0001      768    
