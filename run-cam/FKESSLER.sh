@@ -125,7 +125,7 @@ Hint 1: If you omitted --src, ensure $HOME/src/${SRC_BRANCH} contains a CESM/CAM
 Hint 2: If you provided --src, point it to the *source root* that contains cime/ (e.g., /glade/work/<user>/cesm2)."
 
 # ---------- Case naming (no username duplication) ----------
-CASE_NAME="${COMPSET}_${RES}_baseline"
+CASE_NAME="${COMPSET}_${RES}_perf-cslam"
 
 # Prefer CIME_OUTPUT_ROOT; otherwise fall back carefully using SCRATCH/SCR_ROOT
 if [[ -n "${CIME_OUTPUT_ROOT:-}" ]]; then
